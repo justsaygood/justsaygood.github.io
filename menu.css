@@ -1,0 +1,103 @@
+@font-face {
+    font-family: "TTLakes";
+    src: url("fonts/TTLakes-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "TTLakes";
+    src: url("fonts/TTLakes-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "TTLakes";
+    src: url("fonts/TTLakes-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "TTLakes";
+    font-weight: 500;
+    line-height: 1;
+    font-size: 16px;
+}
+.side-wrap {
+    position: fixed;
+    width: 320px;
+    height: 100%;
+    background: #FFFFFF;
+    box-shadow: -2px 0 4px rgba(69, 79, 126, 0.02), 16px 0 52px rgba(14, 24, 80, 0.2);
+    overflow-y: scroll;
+}
+.mobile-header {
+    height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__burger {
+    margin-left: 24px;
+}
+.header__logo {
+    margin-right: 40px;
+}
+.header__search {
+    margin-right: 24px;
+}
+.mobile-menu {
+    padding-bottom: 90px;
+}
+.my-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.my-menu .my-menu__item_active a {
+    color: rgba(126, 126, 130, 1);
+}
+.my-menu__item_active:before {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 32px;
+    background-color: rgba(65, 246, 215, 1);
+    float: left;
+    border-radius: 7px;
+    margin-top: -7px;
+}
+.my-menu li a {
+    display: block;
+    margin: 32px 0 0 24px;
+    text-decoration: none;
+    color: rgba(27, 28, 33, 1);
+}
+.contacts {
+    display: flex;
+    flex-direction: column;
+}
+.contacts__button {
+    margin-bottom: 16px;
+    margin-left: 24px;
+}
+.mail, .lang {
+    margin-bottom: 12px;
+    margin-left: 24px;
+}
+.contacts__button-call, .contacts__button-chat, .contacts__button-profile {
+    margin-right: 16px;
+}
+.phone {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 24px;
+    margin-bottom: 40px;
+}
+.lang_ru_active {
+    color: rgba(126, 126, 130, 1);
+}
