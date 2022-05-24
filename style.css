@@ -33,7 +33,6 @@ html, body {
 }
 .menu {
     height: 88px;
-    padding-left: 16px;
     display: flex;
     background: #FFFFFF;
     justify-content: space-between;
@@ -47,6 +46,7 @@ html, body {
 .menu__burger {
     width: 40px;
     height: 40px;
+    margin-left: 16px;
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -68,6 +68,12 @@ html, body {
 }
 .menu__check {
     margin-right: 24px;
+}
+.menu__burger:hover, .menu__call:hover, .menu__chat:hover, .menu__profile:hover, .menu__repair:hover, .menu__check:hover {
+    opacity: .6;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
 }
 .heading {
     font-size: 28px;
@@ -110,8 +116,8 @@ html, body {
     padding: 7px 4px 0 0;
     white-space: pre;
 }
- .menu-slide__item:first-child {
-     border: 2px solid #B8FFEC;
+ .menu-slide__item_active {
+    border: 2px solid #B8FFEC;
     border-radius: 6px;
     height: 40px;
     background: #FFFFFF;
@@ -123,6 +129,11 @@ html, body {
     color: #7E7E82;
     font-size: 16px;
     line-height: 24px;
+}
+.menu-slide__item:hover {
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
+    height: 40px;
 }
 .section {
     display: flex;
@@ -141,10 +152,17 @@ html, body {
     margin-top: 13px;
     margin-bottom: 13px;
 }
- .icon-more a {
+.icon-more a {
      color: #1B1C21;
      padding-left: 16px;
      text-decoration: none;
+     font-weight: 400;
+ }
+ .icon-more a:hover {
+     color: #B8FFEC;
+     transition-duration: 0.7s;
+     -webkit-transition-duration: 0.7s;
+     -moz-transition-duration: 0.7s;
  }
 .wrapper {
     min-height: 100%;
@@ -175,7 +193,6 @@ html, body {
         display: none;
         overflow: hidden;
     }
-
 }
 
 @media (min-width: 577px) and (max-width: 770px) {
@@ -189,7 +206,7 @@ html, body {
         margin-bottom: 23px;
     }
     .section {
-        flex-direction: row; /*  блок выстроится в ряд */
+        flex-direction: row;
         align-items: center;
         justify-content: space-between;
     }
@@ -219,7 +236,7 @@ html, body {
         overflow: hidden;
     }
     .icon-more {
-        margin: 13px 0 13px 18px;
+        margin: 13px 0 13px 16px;
     }
     .section__image img {
         align-self: flex-end;
@@ -248,8 +265,6 @@ html, body {
     }
     .menu__repair, .menu__check {
         margin: 42px 32px 0 0;
-        text-decoration: none;
-        text-align: center;
     }
     .menu__check-title,  .menu__repair-title {
         float: left;
@@ -278,6 +293,8 @@ html, body {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+    }
+    .main__text {
         margin: 19px 0 14px 34px;
     }
     .main__text p {
@@ -288,5 +305,8 @@ html, body {
         width: 532px;
         border-radius: 7px;
         margin: 19px 28px 0 36px;
+    }
+    .icon-more {
+        margin-left: 34px;
     }
 }
