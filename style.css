@@ -1,19 +1,19 @@
  @font-face {
-    font-family: "TTLakes";
+    font-family: "TT Lakes";
     src: url("fonts/TTLakes-Bold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
  @font-face {
-    font-family: "TTLakes";
+    font-family: "TT Lakes";
     src: url("fonts/TTLakes-Medium.woff") format("woff");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
  @font-face {
-    font-family: "TTLakes";
+    font-family: "TT Lakes";
     src: url("fonts/TTLakes-Regular.woff") format("woff");
     font-weight: 400;
     font-style: normal;
@@ -27,7 +27,7 @@
 html, body {
     height: 100%;
     width: 100%;
-    font-family: "TTLakes";
+    font-family: "TT Lakes";
     font-weight: 500;
     line-height: 1;
 }
@@ -141,6 +141,7 @@ html, body {
     align-items: center;
 }
 .main__text p {
+    font-weight: 400;
     font-size: 14px;
     line-height: 18px;
 }
@@ -156,7 +157,7 @@ html, body {
      color: #1B1C21;
      padding-left: 16px;
      text-decoration: none;
-     font-weight: 400;
+     font-weight: 500;
  }
  .icon-more a:hover {
      color: #B8FFEC;
@@ -192,6 +193,9 @@ html, body {
     .menu__repair-title, .menu__check-title {
         display: none;
         overflow: hidden;
+    }
+    .section__image img {
+        width: 100%;
     }
 }
 
