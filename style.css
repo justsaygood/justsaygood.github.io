@@ -1,19 +1,19 @@
  @font-face {
-    font-family: "TTLakes";
+    font-family: "TT Lakes";
     src: url("fonts/TTLakes-Bold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
  @font-face {
-    font-family: "TTLakes";
+    font-family: "TT Lakes";
     src: url("fonts/TTLakes-Medium.woff") format("woff");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
  @font-face {
-    font-family: "TTLakes";
+    font-family: "TT Lakes";
     src: url("fonts/TTLakes-Regular.woff") format("woff");
     font-weight: 400;
     font-style: normal;
@@ -24,56 +24,61 @@
     padding: 0%;
     box-sizing: border-box;
 }
-
 html, body {
     height: 100%;
     width: 100%;
-    font-family: "TTLakes";
+    font-family: "TT Lakes";
     font-weight: 500;
     line-height: 1;
 }
-
 .menu {
     height: 88px;
-    padding-left: 16px;
     display: flex;
     background: #FFFFFF;
     justify-content: space-between;
     align-items: center;
 }
-
+.menu_left, .menu_right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
 .menu__burger {
     width: 40px;
     height: 40px;
+    margin-left: 16px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
-
 .menu__logo {
     width: 96px;
     height: 50px;
     margin-right: 16px;
     margin-left: 16px;
 }
-
-.menu__line1, .menu__line {
+.menu__first-line, .menu__second-line {
     width: 2px;
     height: 32px;
     background: #EAEAEA;
 }
-
 .menu__profile, .menu__repair  {
     margin-right: 15px;
     margin-left: 15px;
 }
-
 .menu__check {
     margin-right: 24px;
 }
-
+.menu__burger:hover, .menu__call:hover, .menu__chat:hover, .menu__profile:hover, .menu__repair:hover, .menu__check:hover {
+    opacity: .6;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+}
 .heading {
     font-size: 28px;
     margin: 24px 16px 24px 16px;
 }
-
 .line-heading {
     position: absolute;
     background-color: #41F6D7;
@@ -82,51 +87,42 @@ html, body {
     top: 105px;
     border-radius: 2px;
 }
-
 .wrapper {
     background: #F8F8F8;
 }
-
 .main {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-between;
 }
-
 .main__menu {
     overflow-x: scroll;
     width: 100%;
 }
-
 .main__menu-slide {
     display: flex;
     top: 30px;
-    width: 100%;
-    margin-left: 24px;
+    margin-left: 16px;
     flex-wrap: nowrap;
     align-items: baseline;
 }
-
 .main__menu-slide::-webkit-scrollbar {
     width: 0;
 }
-
-li {
+ .menu-slide__item {
     box-sizing: border-box;
     list-style-type: none;
-    padding: 10px 10px 0 0;
+    padding: 7px 4px 0 0;
     white-space: pre;
 }
-
-li:first-child {
+ .menu-slide__item_active {
     border: 2px solid #B8FFEC;
     border-radius: 6px;
     height: 40px;
     background: #FFFFFF;
 }
-
-.a.text:active, a.text:hover, a {
+.menu-slide__item a {
     text-decoration: none;
     text-align: center;
     padding: 16px;
@@ -134,49 +130,62 @@ li:first-child {
     font-size: 16px;
     line-height: 24px;
 }
-.icon-more a {
-    color: #1B1C21;
+.menu-slide__item:hover {
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
+    height: 40px;
 }
 .section {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .main__text p {
+    font-weight: 400;
     font-size: 14px;
     line-height: 18px;
 }
-.image img {
-    height: 176px;
-    width: 320px;
+.section__image img {
+    width: 100%;
     text-align: center;
 }
 .icon-more {
     margin-top: 13px;
     margin-bottom: 13px;
 }
+.icon-more a {
+     color: #1B1C21;
+     padding-left: 16px;
+     text-decoration: none;
+     font-weight: 500;
+ }
+ .icon-more a:hover {
+     color: #B8FFEC;
+     transition-duration: 0.7s;
+     -webkit-transition-duration: 0.7s;
+     -moz-transition-duration: 0.7s;
+ }
 .wrapper {
     min-height: 100%;
     overflow: hidden;
 }
 
 @media (max-width: 576px) {
-    .menu__call, .menu__chat, .menu__profile, .menu__line1 {
+    .menu__call, .menu__chat, .menu__profile, .menu__first-line{
         display: none;
         overflow: hidden;
     }
-
-    .main__text {
-        width: 288px;
-        height: 90px;
-        overflow: hidden;
-        margin: 24px 16px 16px 16px;
+    .menu-slide__item {
+        margin-bottom: 18px;
     }
-    .main__text:hover {
-         height: auto;
-         cursor: pointer;
-     }
+    .main__text {
+        margin: 0 16px 16px 16px;
+        height: auto;
+    }
+    .second-paragraph {
+        display: none;
+        overflow: hidden;
+    }
     .icon-more {
         align-self: flex-start;
         margin: 16px;
@@ -185,21 +194,23 @@ li:first-child {
         display: none;
         overflow: hidden;
     }
-
+    .section__image img {
+        width: 100%;
+    }
 }
 
-@media (min-width: 576px) and (max-width: 770px) {
-    .menu__logo {
-        margin-right: 250px;
-    }
-    .menu__line1 {
+@media (min-width: 577px) and (max-width: 770px) {
+    .menu__first-line {
         margin-left: 20px;
     }
     .menu__call {
         margin-right: 16px;
     }
+    .menu-slide__item {
+        margin-bottom: 23px;
+    }
     .section {
-        flex-direction: row; /*  блок выстроится в ряд */
+        flex-direction: row;
         align-items: center;
         justify-content: space-between;
     }
@@ -207,40 +218,40 @@ li:first-child {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        width: 312px;
-        height: 194px;
         overflow: hidden;
-        margin: 0 0 0 24px;
     }
     .heading {
         margin: 24px 0 32px 24px;
     }
-
     .menu__repair-title, .menu__check-title {
         display: none;
         overflow: hidden;
     }
-
     .main__text {
-        width: 312px;
-        height: 160px;
-        overflow: hidden;
+        margin-right: 30px;
+        margin-left: 24px;
     }
     .main__text p {
          font-size: 14px;
          line-height: 20px;
      }
-
-    .image img {
+    .second-paragraph {
+        height: 58px;
+        overflow: hidden;
+    }
+    .icon-more {
+        margin: 13px 0 13px 16px;
+    }
+    .section__image img {
         align-self: flex-end;
-        height: 208px;
+        height: auto;
         width: 360px;
-        margin-top: 32px;
+        margin-right: 40px;
         border-radius: 7px;
     }
 }
 
-@media (min-width: 770px) and (max-width: 1400px) {
+@media (min-width: 771px) and (max-width: 1440px) {
     .main {
         position: absolute;
         top: 7px;
@@ -252,61 +263,54 @@ li:first-child {
     .heading {
         margin: 42px 0 10px 32px;
     }
-    .menu__burger, .menu__logo, .menu__line1, .menu__line, .menu__call, .menu__chat, .menu__profile {
+    .menu__burger, .menu__first-line, .menu__logo, .menu__second-line, .menu__call, .menu__chat, .menu__profile {
         display: none;
         overflow: hidden;
     }
-
-    .menu__repair-title, .menu__check-title {
-        margin-right: 9px;
-        margin-top: 45px;
-        font-size: 15px;
-        text-align: right;
-    }
-
     .menu__repair, .menu__check {
-        margin-top: 42px;
-        margin-right: 32px;
-        margin-left: 0;
+        margin: 42px 32px 0 0;
+    }
+    .menu__check-title,  .menu__repair-title {
+        float: left;
+        margin-top: 12px;
+        margin-right: 9px;
+        font-size: 16px;
+        color: rgba(27, 28, 33, 1);
     }
     .menu {
         background: #F8F8F8;
         justify-content: flex-end;
     }
-
     .main__menu {
         overflow: hidden;
     }
     .main__menu-slide {
         width: 100%;
         flex-wrap: wrap;
+        margin-left: 32px;
     }
-
     .section {
-        flex-direction: row; /*  блок выстроится в ряд */
+        flex-direction: row;
         align-items: flex-start;
     }
     .section__text {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        width: 490px;
-        overflow: hidden;
-        margin: 19px 0 14px 34px;
     }
-
     .main__text {
-        height: 160px;
-        overflow: hidden;
+        margin: 19px 0 14px 34px;
     }
     .main__text p {
         font-size: 14px;
         line-height: 20px;
     }
-    .image img {
-        height: 307px;
+    .section__image img {
         width: 532px;
         border-radius: 7px;
-        margin: 10px 28px 49px 36px;
+        margin: 19px 28px 0 36px;
+    }
+    .icon-more {
+        margin-left: 34px;
     }
 }

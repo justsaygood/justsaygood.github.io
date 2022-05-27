@@ -43,6 +43,15 @@ body {
 }
 .header__burger {
     margin-left: 24px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.header__burger:hover, .header__search:hover, .contacts__button-call:hover, .contacts__button-chat:hover, .contact__button-profile:hover {
+    opacity: .6;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
 }
 .header__logo {
     margin-right: 40px;
@@ -58,7 +67,7 @@ body {
     margin: 0;
     padding: 0;
 }
-.my-menu .my-menu__item_active a {
+.my-menu__item a:hover {
     color: rgba(126, 126, 130, 1);
 }
 .my-menu__item_active:before {
@@ -85,9 +94,22 @@ body {
     margin-bottom: 16px;
     margin-left: 24px;
 }
-.mail, .lang {
+.mail {
     margin-bottom: 12px;
     margin-left: 24px;
+    text-decoration: none;
+    color: rgba(27, 28, 33, 1);
+}
+.lang {
+    margin-bottom: 12px;
+    margin-left: 24px;
+}
+.lang_ru, .lang_en, .lang_ch {
+    color: rgba(27, 28, 33, 1);
+    text-decoration: none;
+}
+.lang_ru:hover, .lang_en:hover, .lang_ch:hover {
+    color: rgba(126, 126, 130, 1);
 }
 .contacts__button-call, .contacts__button-chat, .contacts__button-profile {
     margin-right: 16px;
@@ -97,7 +119,6 @@ body {
     font-weight: bold;
     margin-left: 24px;
     margin-bottom: 40px;
-}
-.lang_ru_active {
-    color: rgba(126, 126, 130, 1);
+    text-decoration: none;
+    color: rgba(27, 28, 33, 1);
 }
