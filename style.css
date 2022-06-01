@@ -43,33 +43,28 @@ html, body {
     justify-content: flex-end;
     align-items: center;
 }
-.menu__burger {
+.menu__button {
     width: 40px;
     height: 40px;
-    margin-left: 16px;
     border: none;
     background-color: transparent;
     cursor: pointer;
+    margin-right: 16px;
+}
+.menu__burger {
+    margin-left: 16px;
 }
 .menu__logo {
     width: 96px;
     height: 50px;
-    margin-right: 16px;
-    margin-left: 16px;
 }
 .menu__first-line, .menu__second-line {
     width: 2px;
     height: 32px;
     background: #EAEAEA;
+    margin-right: 20px;
 }
-.menu__profile, .menu__repair  {
-    margin-right: 15px;
-    margin-left: 15px;
-}
-.menu__check {
-    margin-right: 24px;
-}
-.menu__burger:hover, .menu__call:hover, .menu__chat:hover, .menu__profile:hover, .menu__repair:hover, .menu__check:hover {
+.menu__button:hover {
     opacity: .6;
     transition-duration: 0.4s;
     -webkit-transition-duration: 0.4s;
@@ -118,11 +113,11 @@ html, body {
 }
  .menu-slide__item_active {
     border: 2px solid #B8FFEC;
+    background: #FFFFFF;
     border-radius: 6px;
     height: 40px;
-    background: #FFFFFF;
 }
-.menu-slide__item a {
+.item-name {
     text-decoration: none;
     text-align: center;
     padding: 16px;
@@ -135,6 +130,11 @@ html, body {
     border-radius: 6px;
     height: 40px;
 }
+ .menu-slide__item:focus {
+     border: 2px solid #B8FFEC;
+     background: #FFFFFF;
+     border-radius: 6px;
+ }
 .section {
     display: flex;
     flex-direction: column;
@@ -145,25 +145,24 @@ html, body {
     font-size: 14px;
     line-height: 18px;
 }
-.section__image img {
+.main-image {
     width: 100%;
     text-align: center;
 }
-.icon-more {
-    margin-top: 13px;
-    margin-bottom: 13px;
-}
-.icon-more a {
-     color: #1B1C21;
-     padding-left: 16px;
-     text-decoration: none;
+.button__all-text {
+     border: none;
+     background-color: transparent;
+     font-family: "TT Lakes";
+     font-size: 16px;
      font-weight: 500;
+     cursor:pointer;
+     margin: 0 0 16px 16px;
  }
- .icon-more a:hover {
-     color: #B8FFEC;
-     transition-duration: 0.7s;
-     -webkit-transition-duration: 0.7s;
-     -moz-transition-duration: 0.7s;
+ .button__all-text:hover {
+     color: #7E7E82;
+ }
+ .icon-more {
+     margin-right: 10px;
  }
 .wrapper {
     min-height: 100%;
@@ -186,25 +185,21 @@ html, body {
         display: none;
         overflow: hidden;
     }
-    .icon-more {
-        align-self: flex-start;
-        margin: 16px;
-    }
     .menu__repair-title, .menu__check-title {
         display: none;
         overflow: hidden;
     }
-    .section__image img {
+    .main-image {
         width: 100%;
     }
 }
 
 @media (min-width: 577px) and (max-width: 770px) {
-    .menu__first-line {
-        margin-left: 20px;
+    .menu__burger {
+        margin-left: 24px;
     }
-    .menu__call {
-        margin-right: 16px;
+    .menu__check {
+        margin-right: 24px;
     }
     .menu-slide__item {
         margin-bottom: 23px;
@@ -239,10 +234,10 @@ html, body {
         height: 58px;
         overflow: hidden;
     }
-    .icon-more {
+    .button__all-text {
         margin: 13px 0 13px 16px;
     }
-    .section__image img {
+    .main-image {
         align-self: flex-end;
         height: auto;
         width: 360px;
@@ -258,7 +253,7 @@ html, body {
     }
     .line-heading {
         position: absolute;
-        top: 35px;
+        top: 3px;
     }
     .heading {
         margin: 42px 0 10px 32px;
@@ -268,7 +263,9 @@ html, body {
         overflow: hidden;
     }
     .menu__repair, .menu__check {
-        margin: 42px 32px 0 0;
+        width: auto;
+        margin: 40px 32px 0 0;
+        z-index: 1;
     }
     .menu__check-title,  .menu__repair-title {
         float: left;
@@ -305,12 +302,12 @@ html, body {
         font-size: 14px;
         line-height: 20px;
     }
-    .section__image img {
+    .main-image {
         width: 532px;
         border-radius: 7px;
         margin: 19px 28px 0 36px;
     }
-    .icon-more {
+    .button__all-text {
         margin-left: 34px;
     }
 }
