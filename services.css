@@ -18,14 +18,9 @@ html, body {
     background-color: #F2F2F2;
     margin: 0;
 }
-.header:before {
-    content: "";
-    width: 100%;
-    height: 1px;
-    background-color: rgba(217, 255, 245, 1);
-}
 .header {
-    background: linear-gradient(to right, #F8F8F8, #FFFFFF);
+    background: linear-gradient(90deg, #F2F2F2 1.4%, #FFFFFF 100%);
+    border-top: 1px solid #D9FFF5;
 }
 .header__title {
     font-family: "TT Lakes";
@@ -45,9 +40,15 @@ ul {
     background: #FFFFFF;
     border: 1px solid rgba(234, 234, 234, 1);
     border-radius: 7px;
-    height: 72px;
+    height: 70px;
     max-width: 240px;
     margin: 16px 0 40px 16px;
+    display: flex;
+    justify-content: space-between;
+}
+.brand-logo {
+    align-self: center;
+    margin-left: 16px;
 }
 .button__all-info {
     width: 40px;
@@ -55,10 +56,9 @@ ul {
     border: 1px solid #FF3E79;
     border-radius: 50%;
     background: #FFFFFF;
+    margin-right: 16px;
     position: relative;
-    float: right;
-    top: 15px;
-    right: 10px;
+    align-self: center;
     cursor: pointer;
 }
 .button__all-info:after {
@@ -73,6 +73,12 @@ ul {
     border-bottom: 2px solid #FF3E79;
     transform: rotate(225deg);
 }
+.button__all-info:hover {
+    box-shadow: 1px 1px 10px 1px #FF69B4;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+}
 .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
@@ -85,14 +91,20 @@ ul {
     font-size: 16px;
     font-weight: 500;
     cursor:pointer;
+    margin-top: 24px;
+    padding: 0;
 }
+.button__all-list:hover {
+    color: #7E7E82;
+}
+
 @media (max-width: 576px) {
     .button__all-list {
         display: none;
     }
 }
 
-@media (min-width: 577px) and (max-width: 770px) {
+@media (min-width: 577px) and (max-width: 779px) {
     .header__title {
         padding-left: 24px;
     }
@@ -100,25 +112,26 @@ ul {
         display: none;
     }
     .brands-list {
-        display: grid;
-        width: 90%;
-        max-width: 720px;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto;
-        grid-row-gap: 16px;
-        grid-column-gap: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        height: 160px;
+        row-gap: 16px;
+        margin-top: 24px;
     }
     .brands-list__item {
-        display: inline-block;
         margin: 0;
-        max-width: 224px;
+        max-width: 222px;
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
     }
     .icon-more {
         margin-right: 16px;
         margin-left: 32px;
     }
 }
-@media (min-width: 771px) and (max-width: 1440px) {
+@media (min-width: 780px) and (max-width: 2560px) {
     .header__title {
         padding-left: 32px;
     }
@@ -126,20 +139,24 @@ ul {
         display: none;
     }
     .brands-list {
-        display: grid;
-        width: 90%;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: auto;
-        grid-row-gap: 16px;
-        grid-column-gap: 36px;
-    }
-    .icon-more {
-        margin-right: 16px;
-        margin-left: 39px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        height: 160px;
+        margin-top: 24px;
     }
     .brands-list__item {
-        margin:0;
-        max-width: 224px;
-        display: inline-block;
+        max-width: 240px;
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        margin: 0 0 16px 0;
     }
+    .brand-logo {
+        align-self: center;
+    }
+    .icon-more {
+         margin-right: 16px;
+         margin-left: 39px;
+     }
 }
