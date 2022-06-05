@@ -8,37 +8,39 @@
 </head>
 <body>
 <div class="side-wrap">
-    <header class="mobile-header">
-        <button class="button header__burger"><img src="image/burger-close.svg" alt=""></button>
-        <div class="header__logo"><img src="image/logo.svg" alt=""></div>
-        <button class="button header__search"><img src="image/search.svg" alt=""></button>
+    <header class="header">
+        <button class="button button--burger"><img src="image/burger-close.svg" alt=""></button>
+        <div class="header__logo"><a href="#"><img src="image/logo.svg" alt=""></a></div>
+        <button class="button button--search"><img src="image/search.svg" alt=""></button>
     </header>
-    <nav class="mobile-menu">
-        <ul class="my-menu">
-            <li class="my-menu__item"><a href="#" class="my-menu__name">Ремонт техники</a></li>
-            <li class="my-menu__item"><a href="#" class="my-menu__name">Услуги и сервисы</a></li>
-            <li class="my-menu__item"><a href="#" class="my-menu__name">Корпоративным клиентам</a></li>
-            <li class="my-menu__item"><a href="#" class="my-menu__name">Продавцам техники</a></li>
-            <li class="my-menu__item"><a href="#" class="my-menu__name">Партнерам</a></li>
-            <li class="my-menu__item"><a href="#" class="my-menu__name">Производителям</a></li>
-            <li class="my-menu__item"><a href="#" class="my-menu__name">Наши сервисные центры</a></li>
-            <li class="my-menu__item"><a href="#" class="my-menu__name">Контакты</a></li>
+    <nav>
+        <ul class="menu">
+            <li class="menu__item"><a href="#" class="menu__item--link">Ремонт техники</a></li>
+            <li class="menu__item"><a href="#" class="menu__item--link menu__item--link--active">Услуги и сервисы</a></li>
+            <li class="menu__item"><a href="#" class="menu__item--link">Корпоративным клиентам</a></li>
+            <li class="menu__item"><a href="#" class="menu__item--link">Продавцам техники</a></li>
+            <li class="menu__item"><a href="#" class="menu__item--link">Партнерам</a></li>
+            <li class="menu__item"><a href="#" class="menu__item--link">Производителям</a></li>
+            <li class="menu__item"><a href="#" class="menu__item--link">Наши сервисные центры</a></li>
+            <li class="menu__item"><a href="#" class="menu__item--link">Контакты</a></li>
         </ul>
     </nav>
-    <footer class="mobile-footer">
+    <footer class="footer">
         <div class="contacts">
             <div class="contacts__button">
-                <a href="#" class="button contacts__call"><img src="image/call.svg" alt=""></a>
-                <a href="#" class="button contacts__chat"><img src="image/chat.svg" alt=""></a>
-                <a href="#" class="button contacts__profile"><img src="image/profile.svg" alt=""></a>
+                <button class="button button--call"><img src="image/call.svg" alt=""></button>
+                <button class="button button--chat"><img src="image/chat.svg" alt=""></button>
+                <button class="button button--profile"><img src="image/profile.svg" alt=""></button>
             </div>
-            <a href="mailto:mail@cps.com" class="contacts__mail" title="Написать нам">mail@cps.com</a>
-            <a href="tel:+78008908900" class="contacts__phone" title="Позвонить">8 800 890 8900</a>
+            <div class="contacts__link">
+                <a href="mailto:mail@cps.com" class="link link--mail" title="Написать нам">mail@cps.com</a>
+                <a href="tel:+78008908900" class="link link--phone" title="Позвонить">8 800 890 8900</a>
+            </div>
         </div>
-        <div class="lang">
-            <a href="#" class="lang_ru lang_ru_active">RU</a>
-            <a href="#" class="lang_en">EN</a>
-            <a href="#" class="lang_ch">CH</a>
+        <div class="languages">
+            <a href="#" class="languages__link languages__link--active">RU</a>
+            <a href="#" class="languages__link">EN</a>
+            <a href="#" class="languages__link ">CH</a>
         </div>
     </footer>
 </div>
