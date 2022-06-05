@@ -51,7 +51,7 @@ html, body {
     cursor: pointer;
     margin-right: 16px;
 }
-.menu__burger {
+.menu__button--burger {
     margin-left: 16px;
 }
 .menu__logo {
@@ -97,10 +97,10 @@ html, body {
 }
 .main__menu-slide {
     display: flex;
-    top: 30px;
-    margin-left: 16px;
     flex-wrap: nowrap;
     align-items: baseline;
+    margin-left: 16px;
+    column-gap: 10px;
 }
 .main__menu-slide::-webkit-scrollbar {
     width: 0;
@@ -108,25 +108,24 @@ html, body {
  .menu-slide__item {
     box-sizing: border-box;
     list-style-type: none;
-    padding: 7px 4px 0 0;
+    padding: 12px 10px 0 10px;
     white-space: pre;
+    margin: 4px 0 2px 0;
 }
- .menu-slide__item_active {
-    border: 2px solid #B8FFEC;
+ .menu-slide__item--active {
+    outline: 2px solid #B8FFEC;
     background: #FFFFFF;
     border-radius: 6px;
     height: 40px;
 }
-.item-name {
+.menu-slide__item--link {
     text-decoration: none;
     text-align: center;
-    padding: 16px;
     color: #7E7E82;
     font-size: 16px;
-    line-height: 24px;
 }
 .menu-slide__item:hover {
-    border: 2px solid #B8FFEC;
+    outline: 2px solid #B8FFEC;
     border-radius: 6px;
     height: 40px;
 }
@@ -169,23 +168,20 @@ html, body {
     overflow: hidden;
 }
 
-@media (max-width: 576px) {
-    .menu__call, .menu__chat, .menu__profile, .menu__first-line{
+@media (max-width: 767px) {
+    .menu__button--call, .menu__button--chat, .menu__button--profile, .menu__first-line{
         display: none;
         overflow: hidden;
     }
-    .menu-slide__item {
-        margin-bottom: 18px;
-    }
     .main__text {
-        margin: 0 16px 16px 16px;
+        margin: 24px 16px 16px 16px;
         height: auto;
     }
     .second-paragraph {
         display: none;
         overflow: hidden;
     }
-    .menu__repair-title, .menu__check-title {
+    .button--repair-title, .button--check-title {
         display: none;
         overflow: hidden;
     }
@@ -194,15 +190,15 @@ html, body {
     }
 }
 
-@media (min-width: 577px) and (max-width: 770px) {
-    .menu__burger {
+@media (min-width: 768px) {
+    .menu__button--burger {
         margin-left: 24px;
     }
-    .menu__check {
+    .menu__button--check {
         margin-right: 24px;
     }
-    .menu-slide__item {
-        margin-bottom: 23px;
+    .main__menu-slide {
+        margin-left: 24px;
     }
     .section {
         flex-direction: row;
@@ -218,7 +214,7 @@ html, body {
     .heading {
         margin: 24px 0 32px 24px;
     }
-    .menu__repair-title, .menu__check-title {
+    .button--repair-title, .button--check-title {
         display: none;
         overflow: hidden;
     }
@@ -235,7 +231,7 @@ html, body {
         overflow: hidden;
     }
     .button__all-text {
-        margin: 13px 0 13px 16px;
+        margin: 13px 0 13px 32px;
     }
     .main-image {
         align-self: flex-end;
@@ -246,31 +242,33 @@ html, body {
     }
 }
 
-@media (min-width: 771px) and (max-width: 1440px) {
+@media (min-width: 1120px) {
     .main {
         position: absolute;
         top: 7px;
     }
     .line-heading {
         position: absolute;
-        top: 3px;
+        top: 36px;
     }
     .heading {
-        margin: 42px 0 10px 32px;
+        margin: 42px 0 11px 32px;
     }
-    .menu__burger, .menu__first-line, .menu__logo, .menu__second-line, .menu__call, .menu__chat, .menu__profile {
+    .menu__button--burger, .menu__first-line, .menu__logo, .menu__second-line, .menu__button--call, .menu__button--chat, .menu__button--profile {
         display: none;
         overflow: hidden;
     }
-    .menu__repair, .menu__check {
+    .menu__button--repair, .menu__button--check {
         width: auto;
         margin: 40px 32px 0 0;
         z-index: 1;
     }
-    .menu__check-title,  .menu__repair-title {
+    .button--check-title,  .button--repair-title {
         float: left;
+        display: block;
         margin-top: 12px;
         margin-right: 9px;
+        font-family: "TT Lakes";
         font-size: 16px;
         color: rgba(27, 28, 33, 1);
     }
@@ -284,7 +282,7 @@ html, body {
     .main__menu-slide {
         width: 100%;
         flex-wrap: wrap;
-        margin-left: 32px;
+        margin-left: 34px;
     }
     .section {
         flex-direction: row;
@@ -308,6 +306,6 @@ html, body {
         margin: 19px 28px 0 36px;
     }
     .button__all-text {
-        margin-left: 34px;
+        margin-left: 40px;
     }
 }
