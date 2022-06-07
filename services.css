@@ -21,6 +21,7 @@ html, body {
 .main__title-box {
     background: linear-gradient(90deg, #F2F2F2 1.4%, #FFFFFF 100%);
     border-top: 1px solid #D9FFF5;
+    margin-top: 24px;
 }
 .subheading {
     font-family: "TT Lakes";
@@ -102,9 +103,12 @@ ul {
     .button__all {
         display: none;
     }
+    .brands-list {
+        width: 100%;
+    }
 }
 
-@media (min-width: 768px) {
+    @media (min-width: 768px) {
     .subheading {
         padding-left: 24px;
     }
@@ -131,6 +135,7 @@ ul {
         margin-left: 32px;
     }
 }
+
 @media (min-width: 1120px) {
     .subheading {
         padding-left: 32px;

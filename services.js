@@ -5,9 +5,17 @@ new Swiper('.swiper', {
     },
 
     slidesPerView: 'auto',
+    slidesPerGroup: 1,
+    watchOverflow: true,
+    breakpoints: {
+        768: {
+            slidesPerView: Infinity,
+        }
+    }
 });
 
- let showAllListBtn = document.querySelector('.button__all-list');
+
+let showAllListBtn = document.querySelector('.button__all-list');
  let showListImg = document.querySelector('.icon-more');
 // блок brands
  let brandList = document.querySelector('.brands-list');
