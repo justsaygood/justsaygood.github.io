@@ -99,7 +99,7 @@ ul {
 }
 
 @media (max-width: 767px) {
-    .button__all-list {
+    .button__all {
         display: none;
     }
 }
@@ -150,7 +150,6 @@ ul {
         display: flex;
         align-content: center;
         justify-content: space-between;
-        margin: 0 0 16px 0;
     }
     .brand-logo {
         align-self: center;
