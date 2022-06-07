@@ -85,12 +85,6 @@ html, body {
 .wrapper {
     background: #F8F8F8;
 }
-.main {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
 .main__menu {
     overflow-x: scroll;
     width: 100%;
@@ -139,7 +133,7 @@ html, body {
     flex-direction: column;
     align-items: center;
 }
-.main__text p {
+.text p {
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
@@ -147,21 +141,22 @@ html, body {
 .main-image {
     width: 100%;
     text-align: center;
-}
-.button__all-text {
+    margin-top: 24px;
+ }
+.text__button--more {
      border: none;
      background-color: transparent;
      font-family: "TT Lakes", "Arial", sans-serif;
      font-size: 16px;
      font-weight: 500;
      cursor:pointer;
-     margin: 0 0 16px 16px;
+     margin-left: 16px;
  }
- .button__all-text:hover {
+.text__button--more:hover {
      color: #7E7E82;
  }
- .icon-more {
-     margin-right: 10px;
+.icon-more {
+     margin-left: 24px;
  }
 .wrapper {
     min-height: 100%;
@@ -173,7 +168,7 @@ html, body {
         display: none;
         overflow: hidden;
     }
-    .main__text {
+    .text {
         margin: 24px 16px 16px 16px;
         height: auto;
     }
@@ -185,12 +180,12 @@ html, body {
         display: none;
         overflow: hidden;
     }
-    .main-image {
-        width: 100%;
-    }
 }
 
 @media (min-width: 768px) {
+    .swiper-wrapper {
+        display: none;
+    }
     .menu__button--burger {
         margin-left: 24px;
     }
@@ -218,11 +213,11 @@ html, body {
         display: none;
         overflow: hidden;
     }
-    .main__text {
+    .text {
         margin-right: 30px;
         margin-left: 24px;
     }
-    .main__text p {
+    .text p {
          font-size: 14px;
          line-height: 20px;
      }
@@ -230,8 +225,12 @@ html, body {
         height: 58px;
         overflow: hidden;
     }
-    .button__all-text {
-        margin: 13px 0 13px 32px;
+    .text__button--more {
+        margin: 13px 0;
+    }
+    .icon-more {
+        margin-right: 16px;
+        margin-left: 32px;
     }
     .main-image {
         align-self: flex-end;
@@ -294,10 +293,10 @@ html, body {
         flex-direction: column;
         align-items: flex-start;
     }
-    .main__text {
+    .text {
         margin: 19px 0 14px 34px;
     }
-    .main__text p {
+    .text p {
         font-size: 14px;
         line-height: 20px;
     }
@@ -306,7 +305,8 @@ html, body {
         border-radius: 7px;
         margin: 19px 28px 0 36px;
     }
-    .button__all-text {
-        margin-left: 40px;
+    .icon-more {
+        margin-right: 16px;
+        margin-left: 39px;
     }
 }

@@ -18,11 +18,12 @@ html, body {
     background-color: #F2F2F2;
     margin: 0;
 }
-.header {
+.main__title-box {
     background: linear-gradient(90deg, #F2F2F2 1.4%, #FFFFFF 100%);
     border-top: 1px solid #D9FFF5;
+    margin-top: 24px;
 }
-.header__title {
+.subheading {
     font-family: "TT Lakes";
     color: #7E7E82;
     font-size: 16px;
@@ -98,14 +99,17 @@ ul {
     color: #7E7E82;
 }
 
-@media (max-width: 576px) {
-    .button__all-list {
+@media (max-width: 767px) {
+    .button__all {
         display: none;
+    }
+    .brands-list {
+        width: 100%;
     }
 }
 
-@media (min-width: 577px) and (max-width: 779px) {
-    .header__title {
+    @media (min-width: 768px) {
+    .subheading {
         padding-left: 24px;
     }
     .swiper-pagination {
@@ -131,8 +135,9 @@ ul {
         margin-left: 32px;
     }
 }
-@media (min-width: 780px) and (max-width: 2560px) {
-    .header__title {
+
+@media (min-width: 1120px) {
+    .subheading {
         padding-left: 32px;
     }
     .swiper-pagination {
@@ -150,7 +155,6 @@ ul {
         display: flex;
         align-content: center;
         justify-content: space-between;
-        margin: 0 0 16px 0;
     }
     .brand-logo {
         align-self: center;

@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>Block4 Figma</title>
     <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="devices.css">
 </head>
 <body>
 <div class="wrapper">
@@ -44,18 +47,119 @@
         </nav>
         <div class="section">
             <div class="section__text">
-                <div class="main__text">
+                <div class="text">
                     <p class="first-paragraph">Мы являемся авторизованным сервисным центром по ремонту техники Dell.
                         Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
                     <p class="second-paragraph"><br>Мы успешно работаем с 1992 года и заслужили репутацию надежного
                         партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
                 </div>
-                <div class="button__all">
-                    <button type="button" class="button__all-text"><img src="image/icon.svg" alt="" class="icon-more">Читать дальше</button>
+                <div class="text__button">
+                    <img src="image/icon.svg" alt="" class="icon-more">
+                    <button type="button" class="text__button--more">Читать дальше</button>
                 </div>
             </div>
-            <div class="section__image"><img src="image/image.jpg" alt="Логотип СЦ" class="main-image"></div>
+            <div class="section__image">
+                <img src="image/image.jpg" alt="Логотип СЦ" class="main-image">
+            </div>
         </div>
+        <div class="main__title-box">
+            <h2 class="subheading">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</h2>
+        </div>
+        <div class="swiper">
+            <div class="brands-list swiper-wrapper">
+                <div class="brands-list__item swiper-slide">
+                    <img src="./image/lenovo.png" alt="Lenovo" class="brand-logo">
+                    <button type="button" class="button__all-info"></button>
+                </div>
+                <div class="brands-list__item swiper-slide">
+                    <img src="./image/samsung.png" alt="Samsung" class="brand-logo">
+                    <button type="button" class="button__all-info"></button>
+                </div>
+                <div class="brands-list__item swiper-slide">
+                    <img src="./image/apple.png" alt="Apple" class="brand-logo">
+                    <button type="button" class="button__all-info"></button>
+                </div>
+                <div class="brands-list__item swiper-slide">
+                    <img src="./image/bosch.png" alt="Bosch" class="brand-logo">
+                    <button type="button" class="button__all-info"></button>
+                </div>
+                <div class="brands-list__item swiper-slide">
+                    <img src="./image/hp.png" alt="HP" class="brand-logo">
+                    <button type="button" class="button__all-info"></button>
+                </div>
+                <div class="brands-list__item swiper-slide">
+                    <img src="./image/acer.png" alt="Acer" class="brand-logo">
+                    <button type="button" class="button__all-info"></button>
+                </div>
+                <div class="brands-list__item swiper-slide">
+                    <img src="./image/viewsonic.png" alt="ViewSonic" class="brand-logo">
+                    <button type="button" class="button__all-info"></button>
+                </div>
+                <div class="brands-list__item swiper-slide">
+                    <img src="./image/sony.png" alt="Sony" class="brand-logo">
+                    <button type="button" class="button__all-info"></button>
+                </div>
+                <div class="brands-list__item swiper-slide">
+                    <img src="./image/lenovo.png" alt="Lenovo" class="brand-logo">
+                    <button type="button" class="button__all-info"></button>
+                </div>
+                <div class="brands-list__item swiper-slide">
+                    <img src="./image/samsung.png" alt="Samsung" class="brand-logo">
+                    <button type="button" class="button__all-info"></button>
+                </div>
+                <div class="brands-list__item swiper-slide">
+                    <img src="./image/acer.png" alt="Acer" class="brand-logo">
+                    <button type="button" class="button__all-info"></button>
+                </div>
+                <div class="brands-list__item swiper-slide">
+                    <img src="./image/apple.png" alt="Apple" class="brand-logo">
+                    <button type="button" class="button__all-info"></button>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="button__all">
+            <img src="image/icon.svg" alt="" class="icon-more">
+            <button type="button" class="button__all-list">Показать все</button>
+        </div>
+        <div class="main__title-box">
+            <h3 class="subheading">РЕМОНТ РАЗЛИЧНЫХ ВИДОВ ТЕХНИКИ</h3>
+        </div>
+        <div class="swiper">
+            <div class="devices swiper-wrapper">
+                <div class="devices__item swiper-slide">
+                   <span class="devices__item-title">Ремонт ноутбуков</span>
+                    <button type="button" class="button__all-info"></button>
+                </div>
+                <div class="devices__item swiper-slide">
+                    <span class="devices__item-title">Ремонт планшетов</span>
+                    <button type="button" class="button__all-info"></button>
+                </div>
+                <div class="devices__item swiper-slide">
+                    <span class="devices__item-title">Ремонт ПК</span>
+                    <button type="button" class="button__all-info"></button>
+                </div>
+                <div class="devices__item swiper-slide">
+                    <span class="devices__item-title">Ремонт мониторов</span>
+                    <button type="button" class="button__all-info"></button>
+                </div>
+                <div class="devices__item swiper-slide">
+                    <span class="devices__item-title">Ремонт телефонов</span>
+                    <button type="button" class="button__all-info"></button>
+                </div>
+                <div class="devices__item swiper-slide">
+                    <span class="devices__item-title">Ремонт камер</span>
+                    <button type="button" class="button__all-info"></button>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="button__all">
+            <img src="image/icon.svg" alt="" class="icon-more">
+            <button type="button" class="button__all-list">Показать все</button>
+        </div>
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+        <script src="services.js"></script>
     </main>
 </div>
 </body>
