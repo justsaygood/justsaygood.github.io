@@ -1,6 +1,6 @@
 # justsaygood.github.io
-This is my services section
-https://justsaygood.github.io/services.html
+This is my brands section
+https://justsaygood.github.io/brands.html
 
 This is my sidebar-menu
 https://justsaygood.github.io/menu.html
