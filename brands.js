@@ -15,10 +15,10 @@ new Swiper('.swiper', {
 });
 
 
-let showAllListBtn = document.querySelector('.button__all-list');
+let showAllListBtn = document.querySelector('.button-all__brands');
  let showListImg = document.querySelector('.icon-more');
 // блок brands
- let brandList = document.querySelector('.brands-list');
+ let brandList = document.querySelector('.brands');
 
 // разворачивает и сворачивает список брендов brandList
  function showAllBrandList(heightBlock, img, text) {

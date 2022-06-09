@@ -3,5 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/justsaygood.github.io" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/webpack-static-template" vcs="Git" />
   </component>
 </project>
