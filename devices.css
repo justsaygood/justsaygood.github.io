@@ -59,6 +59,7 @@
     font-weight: 500;
     cursor: pointer;
     padding: 0;
+    margin-top: 16px;
 }
 .button-all__devices:hover {
     color: #7E7E82;
