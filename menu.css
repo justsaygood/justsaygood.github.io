@@ -93,7 +93,7 @@
 .side-menu__item--link--active {
     color: rgba(126, 126, 130, 1);
 }
-.footer {
+.side-footer {
     position: absolute;
     bottom: -150px;
 }

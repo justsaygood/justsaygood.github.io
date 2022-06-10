@@ -10,5 +10,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="index.html" />
     <orderEntry type="module" module-name="style.css" />
+    <orderEntry type="module" module-name="LearnProject" />
   </component>
 </module>
