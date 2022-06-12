@@ -1,9 +1,6 @@
 .services {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-evenly;
-    height: 230px;
-    column-gap: 8px;
 }
 .services__item {
     list-style-type: none;
@@ -17,32 +14,96 @@
     width: 260px;
     margin: 16px 0 40px 16px;
 }
+.services__content {
+    padding: 0 0 20px 16px;
+}
 .services__title {
     color: #7E7E82;
     font-size: 14px;
+    padding: 16px 0 4px 0;
 }
-.services__content {
+.services__text {
     font-size: 14px;
 }
 .services__button {
     width: 119px;
     height: 32px;
     background-color: #FF3E79;
+    border: transparent;
     border-radius: 16px;
+    color: white;
     font-family: "TT Lakes", "Arial", sans-serif;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
     cursor: pointer;
+    margin-left: 28px;
+    padding-right: 16px;
+    padding-bottom: 9px;
 }
-.services__button:after {
-    position: absolute;
-    top: 14px;
-    left: 12px;
+.services__button::before {
+    position: relative;
+    left: 94px;
+    top: 12px;
     content: '';
     display: block;
-    width: 7px;
-    height: 7px;
+    width: 6px;
+    height: 6px;
     border-left: 2px solid #FFFFFF;
     border-bottom: 2px solid #FFFFFF;
     transform: rotate(225deg);
 }
+.price-info {
+    display: flex;
+    flex-direction: column;
+}
+.price-info__text {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 0 16px 16px;
+}
+@media (min-width: 768px) {
+    .price-info__text {
+        width: 421px;
+        margin: 0 0 16px 24px;
+    }
+}
+@media (min-width: 1120px) {
+    .price-info__text {
+        margin: 0 0 16px 32px;
+    }
+}
+.price-info__offer {
+    text-decoration: none;
+    color: rgba(27, 28, 33, 1);
+    font-size: 16px;
+    margin: 0 0 16px 16px;
+}
+@media (min-width: 768px) {
+    .price-info__offer {
+        margin: 0 0 16px 24px;
+    }
+}
+@media (min-width: 1120px) {
+    .price-info__offer {
+        margin: 0 0 16px 32px;
+    }
+}
+.price-info__offer::after {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-left: 2px solid #FF3E79;
+    border-bottom: 2px solid #FF3E79;
+    position: relative;
+    bottom: 11px;
+    left: 110px;
+    transform: rotate(225deg);
+}
+@media (min-width: 315px) {
+    .price-info__offer:after {
+        left: 304px;
+    }
+}
+
