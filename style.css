@@ -30,15 +30,22 @@ html, body {
     font-family: "TT Lakes", "Arial", sans-serif;
     font-weight: 500;
     line-height: 1;
+    background-color: #F2F2F2;
+}
+.body--disabled {
+    position: fixed;
+    overflow: hidden;
 }
 .menu {
     height: 88px;
-    display: flex;
     background: #FFFFFF;
+    font-family: "TTLakes", "Arial", sans-serif;
+    font-size: 16px;
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.menu_left, .menu_right {
+.menu-left, .menu-right {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -84,12 +91,6 @@ html, body {
 }
 .wrapper {
     background: #F8F8F8;
-}
-.main {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-between;
 }
 .main__menu {
     overflow-x: scroll;
@@ -147,7 +148,8 @@ html, body {
 .main-image {
     width: 100%;
     text-align: center;
-}
+    margin-top: 24px;
+ }
 .text__button--more {
      border: none;
      background-color: transparent;
@@ -185,13 +187,12 @@ html, body {
         display: none;
         overflow: hidden;
     }
-    .main-image {
-        width: 100%;
-        margin-top: 24px;
-    }
 }
 
 @media (min-width: 768px) {
+    .swiper-wrapper {
+        display: none;
+    }
     .menu__button--burger {
         margin-left: 24px;
     }
@@ -249,12 +250,12 @@ html, body {
 
 @media (min-width: 1120px) {
     .main {
-        position: absolute;
-        top: 7px;
+        position: relative;
+        top: -80px;
     }
     .line-heading {
         position: absolute;
-        top: 36px;
+        top: -4px;
     }
     .heading {
         margin: 42px 0 11px 32px;
