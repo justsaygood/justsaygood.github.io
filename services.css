@@ -2,6 +2,12 @@
     display: flex;
     flex-wrap: nowrap;
 }
+@media (min-width: 768px) {
+    .services {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
 .services__item {
     list-style-type: none;
     display: flex;
@@ -14,16 +20,45 @@
     width: 260px;
     margin: 16px 0 40px 16px;
 }
+@media (min-width: 768px) {
+    .services__item {
+        min-width: 720px;
+        height: 64px;
+        margin: 0 0 0 16px;
+        flex-direction: row;
+    }
+    .services__item:first-child {
+        margin-top: 24px;
+    }
+}
 .services__content {
     padding: 0 0 20px 16px;
+}
+@media (min-width: 768px) {
+    .services__content {
+        display: grid;
+        grid-template-columns: 4fr 1fr 1fr 1fr;
+        align-content: center;
+        padding: 0 0 0 16px;
+    }
 }
 .services__title {
     color: #7E7E82;
     font-size: 14px;
     padding: 16px 0 4px 0;
 }
+@media (min-width: 768px) {
+    .services__title {
+        display: none;
+    }
+}
 .services__text {
     font-size: 14px;
+}
+@media (min-width: 768px) {
+    .services__text {
+        align-self: center;
+    }
 }
 .services__button {
     width: 119px;
@@ -40,6 +75,11 @@
     margin-left: 28px;
     padding-right: 16px;
     padding-bottom: 9px;
+}
+@media (min-width: 768px) {
+    .services__button {
+        margin: 0 16px 0 0;
+    }
 }
 .services__button::before {
     position: relative;
@@ -65,12 +105,12 @@
 @media (min-width: 768px) {
     .price-info__text {
         width: 421px;
-        margin: 0 0 16px 24px;
+        margin: 24px 0 16px 24px;
     }
 }
 @media (min-width: 1120px) {
     .price-info__text {
-        margin: 0 0 16px 32px;
+        margin: 32px 0 16px 32px;
     }
 }
 .price-info__offer {
