@@ -1,4 +1,8 @@
- @font-face {
+@import 'side-menu.css';
+@import 'subheading.css';
+@import 'footer.css';
+
+@font-face {
     font-family: "TT Lakes";
     src: url("fonts/TTLakes-Bold.woff") format("woff");
     font-weight: 700;
@@ -251,11 +255,13 @@ html, body {
 @media (min-width: 1120px) {
     .main {
         position: relative;
+        width: 76%;
         top: -80px;
+        left: 321px;
     }
     .line-heading {
         position: absolute;
-        top: -4px;
+        top: 34px;
     }
     .heading {
         margin: 42px 0 11px 32px;
@@ -317,3 +323,8 @@ html, body {
         margin-left: 39px;
     }
 }
+ @media (min-width: 1120px) {
+     .additional-wrapper {
+         display: flex;
+     }
+ }

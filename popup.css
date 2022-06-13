@@ -1,0 +1,35 @@
+.popup-wrapper {
+    position: fixed;
+    background-color: #FFFFFF;
+    opacity: 90%;
+    top: 0;
+    left: 0;
+}
+.popup {
+
+}
+.popup__feedback--active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-150%);
+    animation: pull 1s backwards;
+}
+@keyframes pull {
+    0% {transform: translateX(-150%);}
+    100% {transform: translateY(0);}
+}
+
+input {
+    width: 95%;
+    height: 24px;
+    margin-bottom: 10px;
+    padding: 2px 5px;
+    font-family: "TT Lakes", sans-serif;
+    vertical-align: middle;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+.popup__link {
+    color: #FF3E79;
+    text-decoration: none;
+}

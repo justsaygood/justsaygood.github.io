@@ -1,0 +1,21 @@
+.subheading {
+    text-transform: uppercase;
+    font-family: "TT Lakes", "Arial", sans-serif;
+    color: #7E7E82;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    padding: 16px;
+    margin: 0;
+}
+@media (min-width: 768px) {
+    .subheading {
+        padding-left: 24px;
+    }
+}
+@media (min-width: 1120px) {
+    .subheading {
+        padding-left: 32px;
+    }
+}

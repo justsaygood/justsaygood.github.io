@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Модальное окно</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<div class="popup-wrapper">
+    <div class="popup popup__feedback">
+        <button type="button" class="button-close"><img src="image/burger-close.svg" alt=""></button>
+        <h5 class="heading">Обратная связь</h5>
+        <fieldset class="popup__content">
+            <input type="text" id="name" placeholder="Имя">
+            <input type="tel" id="tel" name="passport" placeholder="Телефон" required>
+            <input type="mail" id="mail" placeholder="Электронная почта">
+            <input type="text" id="message" placeholder="Сообщение">
+        </fieldset>
+        <span class="agreement">Нажимая “отправить”, вы даете согласие на <a href="#" class="popup__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="popup__link">политикой конфиденциальности</a></span>
+    </div>
+</div>
+</body>
+</html>

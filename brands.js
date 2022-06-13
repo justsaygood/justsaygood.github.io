@@ -16,15 +16,13 @@ new Swiper('.swiper', {
 
 
 let showAllListBtn = document.querySelector('.button-all__brands');
- let showListImg = document.querySelector('.icon-more');
-// блок brands
- let brandList = document.querySelector('.brands');
+let showListImg = document.querySelector('.icon-more');
+let brandList = document.querySelector('.brands');
 
-// разворачивает и сворачивает список брендов brandList
  function showAllBrandList(heightBlock, img, text) {
-     brandList.style.height = heightBlock; // меняем высоту
-     showListImg.src = img; // для смены картинки
-     showAllListBtn.textContent = text; // меняем текст в кнопке
+     brandList.style.height = heightBlock;
+     showListImg.src = img;
+     showAllListBtn.textContent = text;
  }
  showAllListBtn.addEventListener('click', function () {
      if (brandList.style.height !== '100%') {

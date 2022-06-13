@@ -5,65 +5,16 @@
     <meta name="viewport" content="width=device-width">
     <title>Block Figma</title>
     <link rel="stylesheet" href="style.css" type="text/css"/>
-    <link rel="stylesheet" href="menu.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="brands.css">
     <link rel="stylesheet" href="swiper.css">
     <link rel="stylesheet" href="devices.css">
     <link rel="stylesheet" href="services.css">
-    <link rel="stylesheet" href="footer.css">
 </head>
 <body>
 <div class="wrapper">
     <header>
         <div class="header-container">
-            <div class="side-wrap">
-                <div class="side-content">
-                    <header class="header">
-                        <button class="button button--burger"><img src="image/burger-close.svg" alt=""></button>
-                        <div class="header__logo"><a href="#"><img src="image/logo.svg" alt=""></a></div>
-                        <button class="button button--search"><img src="image/search.svg" alt=""></button>
-                    </header>
-                    <nav>
-                        <ul class="side-menu">
-                            <li class="side-menu__item"><a href="#" class="side-menu__item--link">Ремонт техники</a>
-                            </li>
-                            <li class="side-menu__item"><a href="#"
-                                                           class="side-menu__item--link side-menu__item--link--active">Услуги
-                                и сервисы</a></li>
-                            <li class="side-menu__item"><a href="#" class="side-menu__item--link">Корпоративным
-                                клиентам</a></li>
-                            <li class="side-menu__item"><a href="#" class="side-menu__item--link">Продавцам техники</a>
-                            </li>
-                            <li class="side-menu__item"><a href="#" class="side-menu__item--link">Партнерам</a></li>
-                            <li class="side-menu__item"><a href="#" class="side-menu__item--link">Производителям</a>
-                            </li>
-                            <li class="side-menu__item"><a href="#" class="side-menu__item--link">Наши сервисные
-                                центры</a></li>
-                            <li class="side-menu__item"><a href="#" class="side-menu__item--link">Контакты</a></li>
-                        </ul>
-                    </nav>
-                    <footer class="side-footer">
-                        <div class="contacts">
-                            <div class="contacts__button">
-                                <button class="button button--call"><img src="image/call.svg" alt=""></button>
-                                <button class="button button--chat"><img src="image/chat.svg" alt=""></button>
-                                <button class="button button--profile"><img src="image/profile.svg" alt=""></button>
-                            </div>
-                            <div class="contacts__link">
-                                <a class="link link--mail" href="mailto:mail@cps.com"
-                                   title="Написать нам">mail@cps.com</a>
-                                <a class="link link--phone" href="tel:+78008908900" title="Позвонить">8 800 890 8900</a>
-                            </div>
-                        </div>
-                        <div class="languages">
-                            <a href="#" class="languages__link languages__link--active">RU</a>
-                            <a href="#" class="languages__link">EN</a>
-                            <a href="#" class="languages__link ">CH</a>
-                        </div>
-                    </footer>
-                </div>
-            </div>
             <nav class="menu">
                 <div class="menu-left">
                     <button class="menu__button menu__button--burger"><img src="./image/burger.svg" alt=""></button>
@@ -87,7 +38,55 @@
             </nav>
         </div>
     </header>
-    <main class="main">
+    <div class="additional-wrapper">
+        <div class="side-wrap">
+            <div class="side-content">
+                <header class="header">
+                    <button class="button button--burger"><img src="image/burger-close.svg" alt=""></button>
+                    <div class="header__logo"><a href="#"><img src="image/logo.svg" alt=""></a></div>
+                    <button class="button button--search"><img src="image/search.svg" alt=""></button>
+                </header>
+                <nav>
+                    <ul class="side-menu">
+                        <li class="side-menu__item"><a href="#" class="side-menu__item--link">Ремонт техники</a>
+                        </li>
+                        <li class="side-menu__item"><a href="#"
+                                                       class="side-menu__item--link side-menu__item--link--active">Услуги
+                            и сервисы</a></li>
+                        <li class="side-menu__item"><a href="#" class="side-menu__item--link">Корпоративным
+                            клиентам</a></li>
+                        <li class="side-menu__item"><a href="#" class="side-menu__item--link">Продавцам техники</a>
+                        </li>
+                        <li class="side-menu__item"><a href="#" class="side-menu__item--link">Партнерам</a></li>
+                        <li class="side-menu__item"><a href="#" class="side-menu__item--link">Производителям</a>
+                        </li>
+                        <li class="side-menu__item"><a href="#" class="side-menu__item--link">Наши сервисные
+                            центры</a></li>
+                        <li class="side-menu__item"><a href="#" class="side-menu__item--link">Контакты</a></li>
+                    </ul>
+                </nav>
+                <footer class="side-footer">
+                    <div class="contacts">
+                        <div class="contacts__button">
+                            <button class="button button--call"><img src="image/call.svg" alt=""></button>
+                            <button class="button button--chat"><img src="image/chat.svg" alt=""></button>
+                            <button class="button button--profile"><img src="image/profile.svg" alt=""></button>
+                        </div>
+                        <div class="contacts__link">
+                            <a class="link link--mail" href="mailto:mail@cps.com"
+                               title="Написать нам">mail@cps.com</a>
+                            <a class="link link--phone" href="tel:+78008908900" title="Позвонить">8 800 890 8900</a>
+                        </div>
+                    </div>
+                    <div class="languages">
+                        <a href="#" class="languages__link languages__link--active">RU</a>
+                        <a href="#" class="languages__link">EN</a>
+                        <a href="#" class="languages__link ">CH</a>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <main class="main">
         <h1 class="heading">Услуги и сервисы</h1>
         <div class="line-heading"></div>
         <nav class="main__menu">
@@ -228,7 +227,7 @@
             <button class="button-all__devices" type="button">Показать все</button>
         </div>
         <div class="main__title-box">
-            <h3 class="subheading">Цены на услуги</h3>
+            <h4 class="subheading">Цены на услуги</h4>
         </div>
         <div class="swiper">
             <ul class="services swiper-wrapper">
@@ -295,6 +294,7 @@
             <a href="#" class="price-info__offer">Получить коммерческое предложение</a>
         </div>
 </main>
+    </div>
 <footer class="footer">
         <span class="footer__item">© 2019 CPS
 <br>Разработано командой Apesong</span>
@@ -303,7 +303,7 @@
 </footer>
 </div>
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-<script src="menu.js"></script>
+<script src="side-menu.js"></script>
 <script src="brands.js"></script>
 <script src="devices.js"></script>
 </body>

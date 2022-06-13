@@ -13,6 +13,13 @@
         justify-content: space-evenly;
     }
 }
+@media (min-width: 1120px) {
+    .footer {
+        position: absolute;
+        width: 76%;
+        left: 300px;
+    }
+}
 .footer__item {
     color: #7E7E82;
     font-size: 14px;
