@@ -26,7 +26,6 @@
         justify-content: space-evenly;
         height: 160px;
         margin-top: 24px;
-        transition: height 2s;
     }
 }
 .brands__item {

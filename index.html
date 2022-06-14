@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="swiper.css">
     <link rel="stylesheet" href="devices.css">
     <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="popup.css">
 </head>
 <body>
 <div class="wrapper">
@@ -38,6 +39,24 @@
             </nav>
         </div>
     </header>
+    <div class="popup popup__feedback">
+        <div class="popup__body">
+            <button type="button" class="button-close"><img src="image/burger-close.svg" alt=""></button>
+            <h5 class="popup__heading">Обратная связь</h5>
+            <form>
+                <fieldset class="popup__content">
+                    <input type="text" id="name" class="form" name="name" placeholder="Имя" required>
+                    <input type="tel" id="tel" class="form" name="passport" placeholder="Телефон" required>
+                    <input type="email" id="mail" class="form" name="mail" placeholder="Электронная почта" required>
+                    <input type="text" id="message" name="message" class="form form__message" placeholder="Сообщение">
+                </fieldset>
+            </form>
+            <div class="popup__button">
+                <span class="agreement">Нажимая “отправить”, вы даете согласие на <a href="#" class="popup__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="popup__link">политикой конфиденциальности</a></span>
+                <button type="submit" class="submit-btn">Отправить</button>
+            </div>
+        </div>
+    </div>
     <div class="additional-wrapper">
         <div class="side-wrap">
             <div class="side-content">

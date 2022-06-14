@@ -119,7 +119,7 @@
 .price-info__text {
     font-size: 14px;
     font-weight: 400;
-    margin: 0 0 16px 16px;
+    margin: 16px 0 16px 16px;
 }
 @media (min-width: 768px) {
     .price-info__text {
