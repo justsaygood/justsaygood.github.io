@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="swiper.css">
     <link rel="stylesheet" href="devices.css">
     <link rel="stylesheet" href="services.css">
-    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="popup-feedback.css">
+    <link rel="stylesheet" href="popup-call.css">
 </head>
 <body>
 <div class="wrapper">
@@ -23,8 +24,8 @@
                     <div class="menu__logo"><img src="./image/logo.svg" alt=""></div>
                 </div>
                 <div class="menu-right">
-                    <button class="menu__button menu__button--call"><img src="./image/call.svg" alt=""></button>
-                    <button class="menu__button menu__button--chat"><img src="./image/chat.svg" alt=""></button>
+                    <button class="menu__button menu__button--call button--call"><img src="./image/call.svg" alt=""></button>
+                    <button class="menu__button menu__button--chat button--chat"><img src="./image/chat.svg" alt=""></button>
                     <button class="menu__button menu__button--profile"><img src="image/profile.svg" alt=""></button>
                     <div class="menu__second-line"></div>
                     <button class="menu__button menu__button--repair">
@@ -46,10 +47,23 @@
             <form>
                 <fieldset class="popup__content">
                     <input type="text" id="name" class="form" name="name" placeholder="Имя" required>
-                    <input type="tel" id="tel" class="form" name="passport" placeholder="Телефон" required>
+                    <input type="tel" id="tel" class="form" name="telephone" placeholder="Телефон" required>
                     <input type="email" id="mail" class="form" name="mail" placeholder="Электронная почта" required>
                     <input type="text" id="message" name="message" class="form form__message" placeholder="Сообщение">
                 </fieldset>
+            </form>
+            <div class="popup__button">
+                <span class="agreement">Нажимая “отправить”, вы даете согласие на <a href="#" class="popup__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="popup__link">политикой конфиденциальности</a></span>
+                <button type="submit" class="submit-btn">Отправить</button>
+            </div>
+        </div>
+    </div>
+    <div class="popup popup__call">
+        <div class="popup__body">
+            <button type="button" class="button-close"><img src="image/burger-close.svg" alt=""></button>
+            <h6 class="popup__heading">Заказать звонок</h6>
+            <form class="popup__content">
+                    <input type="tel" class="form" id="mobile-number" name="callback" placeholder="Телефон" required>
             </form>
             <div class="popup__button">
                 <span class="agreement">Нажимая “отправить”, вы даете согласие на <a href="#" class="popup__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="popup__link">политикой конфиденциальности</a></span>
@@ -323,6 +337,8 @@
 </div>
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <script src="side-menu.js"></script>
+<script src="popup.js"></script>
+<script src="popup-call.js"></script>
 <script src="brands.js"></script>
 <script src="devices.js"></script>
 </body>
