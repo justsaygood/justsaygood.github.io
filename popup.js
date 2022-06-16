@@ -1,18 +1,14 @@
+let popupFeedback = document.querySelector('.popup__feedback');
+let closePopupFeedbackBtn = popupFeedback.querySelector('.button-close');
 
-//let popup = document.querySelector('.popup');
-//let openPopupFeedbackBtn = document.querySelector('.button--chat');
-//let closePopupFeedbackBtn = popup.querySelector('.button-close');
-//let body = document.querySelector('body');
+document.querySelectorAll('.button--chat').forEach(item => {
+    item.addEventListener('click', event => {
+        popupFeedback.classList.add('popup__feedback--active');
+        document.body.classList.add('body--disabled');
+    })
+});
 
-
-//openPopupFeedbackBtn.addEventListener('click', function () {
-  //   popup.classList.add('popup__feedback--active');
-    //document.body.classList.add('body--disabled');
-
-// });
-
-//closePopupFeedbackBtn.addEventListener('click', function () {
-    // popup.classList.remove('popup__feedback--active');
-   // document.body.classList.remove('body--disabled');
- //});
-
+closePopupFeedbackBtn.addEventListener('click', function () {
+    popupFeedback.classList.remove('popup__feedback--active');
+    document.body.classList.remove('body--disabled');
+})
