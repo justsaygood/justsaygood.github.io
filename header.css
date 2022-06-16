@@ -1,0 +1,106 @@
+.menu {
+  height: 88px;
+  background: #FFFFFF;
+  font-family: "TTLakes", "Arial", sans-serif;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 1120px) {
+  .menu {
+    background: #F8F8F8;
+    justify-content: flex-end;
+  }
+}
+.menu-left, .menu-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.menu__button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-right: 16px;
+}
+.menu__button:hover {
+    opacity: .6;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+  }
+.menu__button--burger {
+  margin-left: 16px;
+}
+  @media (min-width: 768px) {
+    .menu__button--burger {
+      margin-left: 24px;
+    }
+  }
+  @media (min-width: 1120px) {
+    .menu__button--burger {
+      display: none;
+      overflow: hidden;
+    }
+  }
+.menu__logo {
+  width: 96px;
+  height: 50px;
+}
+.menu__first-line, .menu__second-line {
+  width: 2px;
+  height: 32px;
+  background: #EAEAEA;
+  margin-right: 20px;
+}
+
+@media (max-width: 767px) {
+  .menu__button--call, .menu__button--chat, .menu__button--profile, .menu__first-line{
+    display: none;
+    overflow: hidden;
+  }
+}
+@media (max-width: 767px) {
+    .button--repair-title, .button--check-title {
+      display: none;
+      overflow: hidden;
+    }
+}
+@media (min-width: 768px) {
+  .button--repair-title, .button--check-title {
+    display: none;
+    overflow: hidden;
+  }
+}
+@media (min-width: 1120px) {
+  .button--check-title,  .button--repair-title {
+    float: left;
+    display: block;
+    margin-top: 12px;
+    margin-right: 9px;
+    font-family: "TT Lakes", "Arial", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(27, 28, 33, 1);
+  }
+}
+@media (min-width: 768px) {
+  .menu__button--check {
+    margin-right: 24px;
+  }
+}
+@media (min-width: 1120px) {
+  .menu__first-line, .menu__logo, .menu__second-line, .menu__button--call, .menu__button--chat, .menu__button--profile {
+    display: none;
+    overflow: hidden;
+  }
+
+  .menu__button--repair, .menu__button--check {
+    width: auto;
+    margin: 40px 32px 0 0;
+    z-index: 1;
+  }
+}

@@ -1,0 +1,122 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .section {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1120px) {
+  .section {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+@media (min-width: 768px) {
+  .section__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+}
+@media (min-width: 1120px) {
+  .section__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+@media (max-width: 767px) {
+  .text {
+    margin: 24px 16px 16px 16px;
+    height: auto;
+  }
+}
+@media (min-width: 768px) {
+  .text {
+    margin-right: 30px;
+    margin-left: 24px;
+    line-height: 20px;
+  }
+}
+@media (min-width: 1120px) {
+  .text {
+    margin: 19px 0 14px 34px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .second-paragraph {
+    display: none;
+    overflow: hidden;
+  }
+}
+@media (min-width: 768px) {
+  .second-paragraph {
+    height: 58px;
+    overflow: hidden;
+  }
+}
+.text__button--more {
+  border: none;
+  background-color: transparent;
+  font-family: "TT Lakes", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  cursor:pointer;
+  margin-left: 16px;
+}
+@media (min-width: 768px) {
+  .text__button--more {
+    margin: 13px 0;
+  }
+}
+.text__button--more:hover {
+  color: #7E7E82;
+}
+.icon-more {
+  margin-left: 24px;
+}
+@media (min-width: 768px) {
+  .icon-more {
+    margin-right: 16px;
+    margin-left: 32px;
+  }
+}
+@media (min-width: 1120px) {
+  .icon-more {
+    margin-right: 16px;
+    margin-left: 39px;
+  }
+}
+.main-image {
+  width: 100%;
+  text-align: center;
+  margin-top: 24px;
+}
+@media (min-width: 768px) {
+  .main-image {
+    align-self: flex-end;
+    height: auto;
+    width: 360px;
+    margin-right: 40px;
+    border-radius: 7px;
+  }
+}
+@media (min-width: 1120px) {
+  .main-image {
+    width: 532px;
+    border-radius: 7px;
+    margin: 19px 28px 0 36px;
+  }
+}

@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: "TT Lakes", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1;
+  background-color: #F2F2F2;
+}
+.body--disabled {
+  position: fixed;
+  overflow: hidden;
+}
+
+.wrapper {
+  background: #F8F8F8;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+@media (min-width: 1120px) {
+  .additional-wrapper {
+    display: flex;
+  }
+}

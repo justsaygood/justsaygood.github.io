@@ -5,6 +5,7 @@ let closeSideMenuButton = sideMenu.querySelector('.button--burger');
 openSideMenuButton.addEventListener('click', function () {
     sideMenu.classList.add('side-wrap--show');
 
+
     //убрать скролл главной
     let pagePos = window.scrollY;
       document.body.classList.add('body--disabled');
@@ -14,7 +15,7 @@ openSideMenuButton.addEventListener('click', function () {
 closeSideMenuButton.addEventListener('click', function () {
     sideMenu.classList.remove('side-wrap--show');
 
-//вернуть скролл главной
+    //вернуть скролл главной
     let pos = parseInt(document.body.getAttribute('data-scroll'));
     document.body.classList.remove('body--disabled');
     document.setAttribute('data-scroll', '');

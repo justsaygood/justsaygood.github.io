@@ -1,0 +1,28 @@
+.heading {
+  font-size: 28px;
+  margin: 24px 16px 24px 16px;
+}
+@media (min-width: 768px) {
+  .heading {
+    margin: 24px 0 32px 24px;
+  }
+}
+@media (min-width: 1120px) {
+  .heading {
+    margin: 42px 0 11px 32px;
+  }
+}
+.line-heading {
+  position: absolute;
+  background-color: #41F6D7;
+  width: 4px;
+  height: 40px;
+  top: 105px;
+  border-radius: 2px;
+}
+@media (min-width: 1120px) {
+  .line-heading {
+    position: absolute;
+    top: 34px;
+  }
+}

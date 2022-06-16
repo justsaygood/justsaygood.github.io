@@ -29,6 +29,9 @@
     text-decoration: none;
     color: #7E7E82;
  }
+.footer__link:hover {
+  color: #FF69B4;
+}
 .footer__item:first-child {
     margin-left: 24px;
 }
