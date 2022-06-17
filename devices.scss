@@ -1,0 +1,73 @@
+$screen-md: 768px;
+$screen-lg: 1120px;
+
+$color-main: #FFFFFF;
+$gray-dark: #7E7E82;
+
+$font-family: "TT Lakes", "Arial", sans-serif;
+
+.devices {
+  @media (min-width: $screen-md) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 200px;
+    column-gap: 8px;
+  }
+
+  @media (min-width: $screen-lg) {
+    display: flex;
+    height: 200px;
+  }
+
+  &__item {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    background: $color-main;
+    border: 1px solid rgba(234, 234, 234, 1);
+    border-radius: 7px;
+    height: 160px;
+    max-width: 240px;
+    margin: 16px 0 40px 16px;
+
+    @media (min-width: $screen-md) {
+      max-width: 224px;
+      display: flex;
+      align-content: center;
+      justify-content: space-between;
+      margin: 30px 0 0 0;
+    }
+    @media (min-width: $screen-lg) {
+      max-width: 240px;
+      display: flex;
+      align-content: center;
+      justify-content: space-between;
+    }
+    .all-info-btn {
+      align-self: flex-end;
+      margin-bottom: 16px;
+    }
+  }
+  &__item-title {
+    font-family: $font-family;
+    font-size: 16px;
+    white-space: pre;
+    padding: 16px 0 0 16px;
+  }
+}
+
+.button-all__devices {
+  border: none;
+  background-color: transparent;
+  font-family: $font-family;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 16px;
+
+  &:hover {
+    color: $gray-dark;
+  }
+}

@@ -1,12 +1,12 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+$screen-lg: 1120px;
+
+$font-family: "TT Lakes", "Arial", sans-serif;
+
+
 html, body {
   height: 100%;
   width: 100%;
-  font-family: "TT Lakes", "Arial", sans-serif;
+  font-family: $font-family;
   font-weight: 500;
   line-height: 1;
 }
@@ -14,14 +14,12 @@ html, body {
   position: fixed;
   overflow: hidden;
 }
-
 .wrapper {
   background: #F8F8F8;
   min-height: 100%;
   overflow: hidden;
 }
-
-@media (min-width: 1120px) {
+@media (min-width: $screen-lg) {
   .additional-wrapper {
     display: flex;
   }

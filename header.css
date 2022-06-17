@@ -64,19 +64,19 @@
   }
 }
 @media (max-width: 767px) {
-    .button--repair-title, .button--check-title {
+    .menu__button--repair-title, .menu__button--check-title {
       display: none;
       overflow: hidden;
     }
 }
 @media (min-width: 768px) {
-  .button--repair-title, .button--check-title {
+  .menu__button--repair-title, .menu__button--check-title {
     display: none;
     overflow: hidden;
   }
 }
 @media (min-width: 1120px) {
-  .button--check-title,  .button--repair-title {
+  .menu__button--check-title,  .menu__button--repair-title {
     float: left;
     display: block;
     margin-top: 12px;
