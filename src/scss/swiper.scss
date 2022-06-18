@@ -1,0 +1,22 @@
+$screen-md: 768px;
+$screen-lg: 1120px;
+
+$gray-dark: #7E7E82;
+
+
+.swiper-pagination {
+  bottom: 28px;
+
+  @media (min-width: $screen-md) {
+    display: none;
+  }
+
+  @media (min-width: $screen-lg) {
+      display: none;
+  }
+}
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: $gray-dark;
+}

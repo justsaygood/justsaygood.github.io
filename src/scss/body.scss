@@ -2,6 +2,7 @@ $screen-lg: 1120px;
 
 $font-family: "TT Lakes", "Arial", sans-serif;
 
+$gray-light: #F8F8F8;
 
 html, body {
   height: 100%;
@@ -15,7 +16,7 @@ html, body {
   overflow: hidden;
 }
 .wrapper {
-  background: #F8F8F8;
+  background: $gray-light;
   min-height: 100%;
   overflow: hidden;
 }

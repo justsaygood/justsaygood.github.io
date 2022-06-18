@@ -3,13 +3,13 @@ $screen-lg: 1120px;
 
 $color-cherry--light: #FF69B4;
 $gray-dark: #7E7E82;
-$color-marine: #D9FFF5;
+$color-marine-light: #D9FFF5;
 
 $font-family: "TT Lakes", "Arial", sans-serif;
 
 .footer {
   height: 147px;
-  border-top: 1px solid $color-marine;
+  border-top: 1px solid $color-marine-light;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -32,14 +32,14 @@ $font-family: "TT Lakes", "Arial", sans-serif;
     font-size: 14px;
     margin-top: 16px;
 
-    &__item:first-child {
+    &:first-child {
       margin-left: 24px;
 
       @media (min-width: $screen-lg) {
         margin-left: 30px;
       }
     }
-    &__item:last-child {
+    &:last-child {
       margin-left: 15px;
 
       @media (min-width: $screen-md) {
@@ -51,7 +51,7 @@ $font-family: "TT Lakes", "Arial", sans-serif;
     text-decoration: none;
     color: $gray-dark;
 
-    &__link:hover {
+    &:hover {
       color: $color-cherry--light;
     }
   }

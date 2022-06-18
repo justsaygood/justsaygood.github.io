@@ -6,14 +6,14 @@ $color-main: #FFFFFF;
 $color-cherry: #FF3E79;
 $color-cherry--light: #FF69B4;
 $gray-dark: #7E7E82;
-$color-marine: #D9FFF5;
+$color-marine-light: #D9FFF5;
 
 $font-family: "TT Lakes", "Arial", sans-serif;
 
 .main__title-box {
   background: -webkit-gradient(linear, left top, right top, color-stop(1.4%, #F2F2F2), to(#FFFFFF));
   background: linear-gradient(90deg, #F2F2F2 1.4%, #FFFFFF 100%);
-  border-top: 1px solid $color-marine;
+  border-top: 1px solid $color-marine-light;
   margin-top: 24px;
 }
 .brands {

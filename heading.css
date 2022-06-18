@@ -21,8 +21,8 @@
   border-radius: 2px;
 }
 @media (min-width: 1120px) {
-  .line-heading {
-    position: absolute;
-    top: 34px;
-  }
+    .line-heading {
+      position: absolute;
+      top: 34px;
+    }
 }
