@@ -56,6 +56,13 @@ $font-family: "TT Lakes", "Arial", sans-serif;
       background-color: transparent;
       cursor: pointer;
 
+      &:hover {
+        opacity: .6;
+        transition-duration: 0.4s;
+        -webkit-transition-duration: 0.4s;
+        -moz-transition-duration: 0.4s;
+      }
+
       &--burger {
         margin-left: 16px;
 
@@ -72,12 +79,6 @@ $font-family: "TT Lakes", "Arial", sans-serif;
         background-color: transparent;
         cursor: pointer;
         margin-right: 24px;
-      }
-      &:hover {
-          opacity: .6;
-          transition-duration: 0.4s;
-          -webkit-transition-duration: 0.4s;
-          -moz-transition-duration: 0.4s;
       }
     }
     &__logo {
@@ -123,11 +124,7 @@ $font-family: "TT Lakes", "Arial", sans-serif;
     bottom: -150px;
 
     @media (min-width: $screen-lg) {
-        bottom: unset;
-    }
-
-    @media (min-width: 1200px) {
-        bottom: -13px;
+      bottom: 0;
     }
 
     .contacts {
@@ -138,6 +135,20 @@ $font-family: "TT Lakes", "Arial", sans-serif;
         margin-bottom: 16px;
         margin-left: 24px;
 
+        .button {
+          width: 40px;
+          height: 40px;
+          border: none;
+          background-color: transparent;
+          cursor: pointer;
+
+          &:hover {
+            opacity: .6;
+            transition-duration: 0.4s;
+            -webkit-transition-duration: 0.4s;
+            -moz-transition-duration: 0.4s;
+          }
+        }
         .button--call, .button--chat, .button--profile {
           margin-right: 16px;
         }
@@ -148,8 +159,7 @@ $font-family: "TT Lakes", "Arial", sans-serif;
         flex-wrap: wrap;
 
         .link--mail {
-          margin-bottom: 12px;
-          margin-left: 24px;
+          margin: 0 10px 12px 24px;
           text-decoration: none;
           color: $color-deep;
 

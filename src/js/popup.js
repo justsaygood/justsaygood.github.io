@@ -11,4 +11,6 @@ document.querySelectorAll('.button--chat').forEach(item => {
 closePopupFeedbackBtn.addEventListener('click', function () {
     popupFeedback.classList.remove('popup__feedback--active');
     document.body.classList.remove('body--disabled');
-})
+});
+
+export {popupFeedback, closePopupFeedbackBtn};

@@ -11,4 +11,6 @@ document.querySelectorAll('.button--call').forEach(item => {
 closePopupCallBtn.addEventListener('click', function () {
       popupCall.classList.remove('popup__call--active');
       document.body.classList.remove('body--disabled');
- })
+ });
+
+export {popupCall, closePopupCallBtn};

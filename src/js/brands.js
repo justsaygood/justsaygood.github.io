@@ -1,4 +1,3 @@
-
 let showAllListBtn = document.querySelector('.button-all__brands');
 let showListImg = document.querySelector('.icon-more');
 let brandList = document.querySelector('.brands');
@@ -15,3 +14,5 @@ let brandList = document.querySelector('.brands');
          showAllBrandList('160px', 'image/icon.svg', 'Показать все');
      }
  });
+
+ export {showAllListBtn, showListImg, brandList};

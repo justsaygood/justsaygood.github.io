@@ -31,7 +31,7 @@ $font-family: "TT Lakes", "Arial", sans-serif;
     justify-content: flex-end;
     align-items: center;
   }
-  &__button {
+  .menu__button {
     width: 40px;
     height: 40px;
     border: none;
@@ -39,27 +39,28 @@ $font-family: "TT Lakes", "Arial", sans-serif;
     cursor: pointer;
     margin-right: 16px;
 
-    &__button:hover {
+    &:hover {
       opacity: .6;
       transition-duration: 0.4s;
       -webkit-transition-duration: 0.4s;
       -moz-transition-duration: 0.4s;
     }
+  }
+  .menu__button--burger {
+    margin-left: 16px;
 
-    &__button--burger {
-      margin-left: 16px;
-
-      @media (min-width: $screen-md) {
-        margin-left: 24px;
-      }
-
-      @media (min-width: $screen-lg) {
-        display: none;
-        overflow: hidden;
-      }
+    @media (min-width: $screen-md) {
+      margin-left: 24px;
     }
 
-    &__button--call, &__button--chat, &__button--profile {
+    @media (min-width: $screen-lg) {
+      display: none;
+      overflow: hidden;
+    }
+  }
+
+    .menu__button--call, .menu__button--chat, .menu__button--profile {
+
       @media (max-width: $screen-sm) {
         display: none;
         overflow: hidden;
@@ -71,7 +72,7 @@ $font-family: "TT Lakes", "Arial", sans-serif;
       }
     }
 
-    &__button--check {
+    .menu__button--check {
       @media (min-width: $screen-md) {
         margin-right: 24px;
       }
@@ -82,14 +83,14 @@ $font-family: "TT Lakes", "Arial", sans-serif;
       }
     }
 
-    &__button--repair {
+    .menu__button--repair {
       @media (min-width: $screen-lg) {
         width: auto;
         margin: 40px 32px 0 0;
         z-index: 1;
       }
     }
-    &__button--repair-title, &__button--check-title {
+    .menu__button--repair-title, .menu__button--check-title {
       display: none;
       overflow: hidden;
 
@@ -104,8 +105,7 @@ $font-family: "TT Lakes", "Arial", sans-serif;
         color: $color-deep;
       }
     }
-  }
-  &__logo {
+  .menu__logo {
     width: 96px;
     height: 50px;
 
@@ -114,7 +114,7 @@ $font-family: "TT Lakes", "Arial", sans-serif;
       overflow: hidden;
     }
   }
-  &__first-line {
+  .menu__first-line {
     width: 2px;
     height: 32px;
     background: $gray;

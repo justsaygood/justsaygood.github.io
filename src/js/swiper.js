@@ -1,4 +1,4 @@
-new Swiper('.swiper', {
+const Slider = new Swiper('.swiper', {
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
@@ -12,4 +12,6 @@ new Swiper('.swiper', {
       slidesPerView: Infinity,
     }
   }
-});
+})
+
+export default Slider;

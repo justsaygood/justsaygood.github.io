@@ -14,3 +14,5 @@ showAllList.addEventListener('click', function () {
         showAllDevicesList('200px', 'image/icon.svg', 'Показать все');
     }
 });
+
+export {showAllList, showImg, devicesList};
