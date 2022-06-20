@@ -42,6 +42,12 @@ $font-family: "TT Lakes", "Arial", sans-serif;
 
       &:first-child {
         margin-top: 24px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+      }
+      &:last-child {
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
       }
     }
     &:not(:first-child):after {

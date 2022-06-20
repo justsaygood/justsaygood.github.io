@@ -1,18 +1,11 @@
-let showAllListBtn = document.querySelector('.button-all__brands');
+const showAllListBtn = document.querySelector('.button-all__brands');
 let showListImg = document.querySelector('.icon-more');
 let brandList = document.querySelector('.brands');
 
- function showAllBrandList(heightBlock, img, text) {
-     brandList.style.height = heightBlock;
-     showListImg.src = img;
-     showAllListBtn.textContent = text;
- }
- showAllListBtn.addEventListener('click', function () {
-     if (brandList.style.height !== '100%') {
-         showAllBrandList('100%', 'image/icon-close.svg', 'Скрыть');
-     } else {
-         showAllBrandList('160px', 'image/icon.svg', 'Показать все');
-     }
- });
+
+   showAllListBtn.addEventListener('click', function () {
+     brandList.classList.add('brands--open');
+     this.textContent = this.textContent === 'Показать все' ? 'Скрыть' : 'Показать все';
+   })
 
  export {showAllListBtn, showListImg, brandList};
