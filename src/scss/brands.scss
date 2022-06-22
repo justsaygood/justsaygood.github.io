@@ -102,18 +102,20 @@ $font-family: "TT Lakes", sans-serif;
   }
 }
 
-@media (min-width: $screen-md) {
   .icon-more {
+    @media (min-width: $screen-md) {
     margin-right: 16px;
     margin-left: 32px;
-  }
+    }
+    @media (min-width: $screen-lg) {
+      margin-right: 16px;
+      margin-left: 39px;
+    }
+    &--reverse {
+      transform: rotate(180deg);
+    }
 }
-@media (min-width: $screen-lg) {
-  .icon-more {
-    margin-right: 16px;
-    margin-left: 39px;
-  }
-}
+
 .button-all {
   @media (max-width: $screen-sm) {
     display: none;
