@@ -1,0 +1,219 @@
+$screen-sm: 767px;
+$screen-md: 768px;
+$screen-lg: 1120px;
+
+$color-main: #FFFFFF;
+$color-marine: #41F6D7;
+$color-marine-light: #D9FFF5;
+$color-cherry: #FF3E79;
+$gray-dark: #7E7E82;
+$gray-light: #F8F8F8;
+
+
+$font-family: "TT Lakes", "Arial", sans-serif;
+
+.popup {
+  position: fixed;
+  background-color: $color-main;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  visibility: hidden;
+
+  &__feedback--active {
+    visibility: visible;
+    animation: animation 1.3s forwards;
+
+    @keyframes animation {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: $color-main;
+      opacity: 90%;
+      z-index: -1;
+    }
+  }
+
+  &__call--active {
+    visibility: visible;
+    animation: animation 1.3s forwards;
+
+    @keyframes animation {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: $color-main;
+      opacity: 90%;
+      z-index: 0;
+    }
+  }
+
+  &__body {
+    width: 320px;
+    height: 100%;
+    background: $color-main;
+    box-shadow: -2px 0 4px rgba(69, 79, 126, 0.02), 16px 0 52px rgba(14, 24, 80, 0.2);
+    position: fixed;
+    right: 0;
+    top: 0;
+
+    @media (min-width: $screen-lg) {
+      width: 440px;
+    }
+    .button-close {
+      width: 40px;
+      height: 40px;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      margin: 24px 16px;
+      padding: 0;
+
+      @media (min-width: $screen-lg) {
+        position: absolute;
+        right: 455px;
+      }
+
+      &:hover {
+        opacity: .6;
+        transition-duration: 0.4s;
+        -webkit-transition-duration: 0.4s;
+        -moz-transition-duration: 0.4s;
+      }
+    }
+
+    .popup__heading {
+      font-size: 24px;
+      margin: 24px 16px;
+
+      @media (min-width: $screen-lg) {
+        margin: 24px 32px;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        background-color: $color-marine;
+        width: 4px;
+        height: 40px;
+        border-radius: 2px;
+        left: 0;
+        top: 100px;
+
+        @media (min-width: $screen-lg) {
+            top: 18px;
+        }
+      }
+    }
+
+    .popup__content {
+      border: none;
+      padding: 0;
+      margin: 0 16px;
+
+      @media (min-width: $screen-lg) {
+            margin: 0 32px;
+      }
+
+      .form {
+        width: 100%;
+        height: 48px;
+        box-sizing: border-box;
+        font-family: $font-family;
+        color: $gray-dark;
+        border: 1px solid $gray-dark;
+        border-radius: 5px;
+        margin-bottom: 16px;
+        padding: 0 16px;
+
+        &__message {
+          height: 118px;
+        }
+        &:active {
+          border: 1px solid $color-cherry;
+        }
+      }
+    }
+
+    .popup__button {
+      display: flex;
+      flex-direction: column;
+      margin: 0 16px;
+
+      @media (min-width: $screen-lg) {
+          margin: 0 32px;
+      }
+
+      .agreement {
+        font-size: 14px;
+
+        .popup__link {
+          color: $color-cherry;
+          text-decoration: none;
+
+          &:hover {
+            color: $gray-dark;
+          }
+        }
+      }
+      .submit-btn {
+        align-self: flex-end;
+        width: 119px;
+        height: 32px;
+        background-color: $color-cherry;
+        border: transparent;
+        border-radius: 16px;
+        color: $color-main;
+        font-family: $font-family;
+        font-size: 12px;
+        font-weight: 700;
+        cursor: pointer;
+        margin: 16px 0 0 0;
+        padding: 6px 26px 0 0;
+
+        &:hover {
+          opacity: .6;
+          transition-duration: 0.4s;
+          -webkit-transition-duration: 0.4s;
+          -moz-transition-duration: 0.4s;
+        }
+        &::after {
+          position: relative;
+          left: 87px;
+          top: -10px;
+          content: '';
+          display: block;
+          width: 6px;
+          height: 6px;
+          border-left: 2px solid $color-main;
+          border-bottom: 2px solid $color-main;
+          transform: rotate(225deg);
+        }
+      }
+    }
+  }
+}

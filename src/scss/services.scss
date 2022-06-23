@@ -1,0 +1,191 @@
+$screen-sm: 767px;
+$screen-md: 768px;
+$screen-lg: 1120px;
+
+$color-main: #FFFFFF;
+$color-cherry: #FF3E79;
+$gray: #EAEAEA;
+$gray-light: #F8F8F8;
+$gray-dark: #7E7E82;
+$color-deep: rgba(27, 28, 33, 1);
+
+$font-family: "TT Lakes", "Arial", sans-serif;
+
+
+.services {
+  display: flex;
+  flex-wrap: nowrap;
+
+  @media (min-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__item {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: $color-main;
+    border: 1px solid $gray;
+    border-radius: 7px;
+    height: 200px;
+    width: 260px;
+    margin: 16px 0 40px 16px;
+
+    @media (min-width: $screen-md) {
+      width: 96%;
+      height: 64px;
+      margin: 0 0 0 16px;
+      flex-direction: row;
+      border: none;
+      border-radius: unset;
+
+      &:first-child {
+        margin-top: 24px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+      }
+      &:last-child {
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+    }
+    &:not(:first-child):after {
+      @media (min-width: $screen-md) {
+        content: '';
+        background: $gray;
+        width: 95%;
+        height: 1px;
+        position: absolute;
+        left: 20px;
+      }
+    }
+    .services__content {
+      padding: 0 0 20px 16px;
+
+      @media (min-width: $screen-md) {
+        display: grid;
+        grid-template-columns: 4fr 1fr 1fr 1fr;
+        width: 100%;
+        align-content: center;
+        padding: 0 0 0 16px;
+      }
+
+      .services__title {
+        color: $gray-dark;
+        font-size: 14px;
+        padding: 16px 0 4px 0;
+
+        @media (min-width: $screen-md) {
+          display: none;
+        }
+      }
+      .services__text {
+        font-size: 14px;
+
+        @media (min-width: $screen-md) {
+          align-self: center;
+        }
+      }
+
+      .services__button {
+        width: 119px;
+        height: 32px;
+        background-color: $color-cherry;
+        border: transparent;
+        border-radius: 16px;
+        color: $color-main;
+        font-family: $font-family;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        cursor: pointer;
+        margin-left: 28px;
+        padding-right: 16px;
+        padding-bottom: 9px;
+
+        @media (min-width: $screen-md) {
+          margin: 0 16px 0 0;
+        }
+
+        &:hover {
+          opacity: .6;
+          transition-duration: 0.4s;
+          -webkit-transition-duration: 0.4s;
+          -moz-transition-duration: 0.4s;
+        }
+        &::before {
+          position: relative;
+          left: 94px;
+          top: 12px;
+          content: '';
+          display: block;
+          width: 6px;
+          height: 6px;
+          border-left: 2px solid $color-main;
+          border-bottom: 2px solid $color-main;
+          transform: rotate(225deg);
+        }
+      }
+    }
+  }
+}
+
+.price-info {
+  display: flex;
+  flex-direction: column;
+
+  &__text {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 16px 0 16px 16px;
+
+    @media (min-width: $screen-md) {
+        width: 421px;
+        margin: 24px 0 16px 24px;
+    }
+    @media (min-width: $screen-lg) {
+        margin: 32px 0 16px 32px;
+    }
+  }
+
+  &__offer {
+    text-decoration: none;
+    color: $color-deep;
+    font-size: 16px;
+    margin: 0 0 16px 16px;
+
+    @media (min-width: 330px) {
+      width: 320px;
+    }
+
+    @media (min-width: $screen-md) {
+        margin: 0 0 16px 24px;
+    }
+
+    @media (min-width: $screen-lg) {
+        margin: 0 0 16px 32px;
+    }
+
+    &:hover {
+      color: $gray-dark;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-left: 2px solid $color-cherry;
+      border-bottom: 2px solid $color-cherry;
+      position: relative;
+      bottom: 11px;
+      left: 110px;
+      transform: rotate(225deg);
+
+      @media (min-width: 315px) {
+          left: 304px;
+      }
+    }
+  }
+}
