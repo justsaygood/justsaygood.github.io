@@ -1,0 +1,73 @@
+$screen-sm: 767px;
+$screen-md: 768px;
+$screen-lg: 1120px;
+
+$color-main: #FFFFFF;
+$color-cherry: #FF3E79;
+$color-cherry--light: #FF69B4;
+$gray-dark: #7E7E82;
+$gray-light: #F8F8F8;
+$color-marine-light: #D9FFF5;
+
+$font-family: "TT Lakes", sans-serif;
+
+
+.brands {
+  width: 100%;
+
+  @media (min-width: $screen-md) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-height: 160px;
+    row-gap: 16px;
+    column-gap: 8px;
+    margin-top: 24px;
+    transition: max-height 0.5s ease-in-out;
+  }
+
+  @media (min-width: $screen-lg) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-height: 160px;
+    margin-top: 24px;
+  }
+  &--open {
+    max-height: 243px;
+  }
+
+  &__item {
+    list-style-type: none;
+    background: $color-main;
+    border: 1px solid rgba(234, 234, 234, 1);
+    border-radius: 7px;
+    height: 70px;
+    max-width: 240px;
+    margin: 16px 0 40px 16px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (min-width: $screen-md) {
+      margin: 0;
+      max-width: 222px;
+      display: flex;
+      align-content: center;
+      justify-content: space-between;
+    }
+    @media (min-width: $screen-lg) {
+      max-width: 240px;
+      display: flex;
+      align-content: center;
+      justify-content: space-between;
+    }
+    &:hover {
+      box-shadow: 1px 1px 10px 1px $gray-dark;
+      transition-duration: 0.5s;
+    }
+  }
+}
+.brand-logo {
+  align-self: center;
+  padding-left: 16px;
+}

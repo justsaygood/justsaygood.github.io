@@ -1,0 +1,208 @@
+$screen-sm: 767px;
+$screen-md: 768px;
+$screen-lg: 1120px;
+
+$color-main: #FFFFFF;
+$color-marine: #41F6D7;
+$gray-dark: #7E7E82;
+$color-deep: rgba(27, 28, 33, 1);
+
+$font-family: "TT Lakes", "Arial", sans-serif;
+
+.side-wrap {
+  visibility: hidden;
+  position: fixed;
+  width: 320px;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: rgba(255, 255, 255, 0.96);
+  z-index: 2;
+
+  @media (min-width: 320px) {
+    top: 0;
+  }
+  @media (min-width: $screen-lg) {
+    visibility: visible;
+    position: static;
+    overflow-y: unset;
+    height: unset;
+  }
+  &--show {
+    visibility: visible;
+    width: 100%;
+    opacity: 1;
+    transition: opacity 1s, visibility 0.5s;
+    animation: ani 1s forwards;
+
+    @keyframes ani {
+      0% {transform: translateX(-150%);}
+      100% {transform: translateY(0);}
+    }
+  }
+  .side-content {
+    width: 320px;
+    min-height: 1000px;
+    background: $color-main;
+    opacity: 1;
+    box-shadow: -2px 0 4px rgba(69, 79, 126, 0.02), 16px 0 52px rgba(14, 24, 80, 0.2);
+    z-index: 3;
+    transform: translateX(-150%);
+    animation: ani 1s forwards;
+
+    @keyframes ani {
+      0% {transform: translateX(-150%);}
+      100% {transform: translateY(0);}
+    }
+
+    @media (min-width: $screen-lg) {
+      box-shadow: none;
+    }
+  }
+  .side-header {
+    height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (min-width: $screen-lg) {
+        margin-top: 10px;
+    }
+    .button {
+      padding: 0;
+      width: 40px;
+      height: 40px;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+
+      &:hover {
+        opacity: .6;
+        transition-duration: 0.4s;
+        -webkit-transition-duration: 0.4s;
+        -moz-transition-duration: 0.4s;
+      }
+
+      &--burger {
+        margin-left: 16px;
+
+        @media (min-width: $screen-md) {
+          margin-left: 24px;
+        }
+
+        @media (min-width: $screen-lg) {
+          display: none;
+        }
+      }
+      &--search {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        margin-right: 24px;
+      }
+    }
+    &__logo {
+      margin-left: 16px;
+      margin-right: 40px;
+    }
+  }
+
+  .side-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &__item--link {
+      display: block;
+      margin: 32px 0 0 24px;
+      text-decoration: none;
+      color: $color-deep;
+
+      &:hover {
+        color: $gray-dark;
+      }
+
+      &--active {
+        color: $gray-dark;
+
+        &:before {
+          content: "";
+          display: block;
+          width: 4px;
+          height: 32px;
+          background-color:$color-marine;
+          float: left;
+          border-radius: 7px;
+          margin-top: -7px;
+          margin-left: -24px;
+        }
+      }
+    }
+  }
+  .side-footer {
+
+    .contacts {
+      display: flex;
+      flex-direction: column;
+
+      &__button {
+        margin: 35px 0 16px 24px;
+
+        .button {
+          width: 40px;
+          height: 40px;
+          border: none;
+          background-color: transparent;
+          cursor: pointer;
+
+          &:hover {
+            opacity: .6;
+            transition-duration: 0.4s;
+            -webkit-transition-duration: 0.4s;
+            -moz-transition-duration: 0.4s;
+          }
+        }
+        .button--call, .button--chat, .button--profile {
+          margin-right: 16px;
+        }
+      }
+
+      &__link {
+        display: flex;
+        flex-wrap: wrap;
+
+        .link--mail {
+          margin: 0 10px 12px 24px;
+          text-decoration: none;
+          color: $color-deep;
+
+          &:hover {
+            color: $gray-dark;
+          }
+        }
+        .link--phone {
+          font-size: 24px;
+          font-weight: bold;
+          margin-left: 24px;
+          text-decoration: none;
+          color: $color-deep;
+
+          &:hover {
+            color: $gray-dark;
+          }
+        }
+      }
+    }
+    .languages {
+      margin: 34px 0 32px 24px;
+
+      &__link {
+        color: $color-deep;
+        text-decoration: none;
+
+        &:hover, &--active {
+          color: $gray-dark;
+        }
+      }
+    }
+  }
+}

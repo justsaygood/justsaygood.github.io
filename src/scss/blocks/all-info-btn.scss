@@ -1,0 +1,33 @@
+$color-main: #FFFFFF;
+$color-cherry: #FF3E79;
+$color-cherry--light: #FF69B4;
+
+.all-info-btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid $color-cherry;
+  border-radius: 50%;
+  background: $color-main;
+  margin-right: 16px;
+  position: relative;
+  align-self: center;
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    top: 14px;
+    left: 12px;
+    content: '';
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-left: 2px solid $color-cherry;
+    border-bottom: 2px solid $color-cherry;
+    transform: rotate(225deg);
+  }
+
+  &:hover {
+    box-shadow: 1px 1px 10px 1px $color-cherry--light;
+    transition-duration: 0.4s;
+  }
+}

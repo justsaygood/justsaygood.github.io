@@ -1,0 +1,67 @@
+$screen-sm: 767px;
+$screen-md: 768px;
+$screen-lg: 1120px;
+
+$color-cherry: #FF3E79;
+$gray-dark: #7E7E82;
+$color-deep: rgba(27, 28, 33, 1);
+
+
+.price-info {
+  display: flex;
+  flex-direction: column;
+
+  &__text {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 16px 0 16px 16px;
+
+    @media (min-width: $screen-md) {
+      width: 421px;
+      margin: 24px 0 16px 24px;
+    }
+    @media (min-width: $screen-lg) {
+      margin: 32px 0 16px 32px;
+    }
+  }
+
+  &__offer {
+    text-decoration: none;
+    color: $color-deep;
+    font-size: 16px;
+    margin: 0 0 16px 16px;
+
+    @media (min-width: 330px) {
+      width: 320px;
+    }
+
+    @media (min-width: $screen-md) {
+      margin: 0 0 16px 24px;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin: 0 0 16px 32px;
+    }
+
+    &:hover {
+      color: $gray-dark;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-left: 2px solid $color-cherry;
+      border-bottom: 2px solid $color-cherry;
+      position: relative;
+      bottom: 11px;
+      left: 110px;
+      transform: rotate(225deg);
+
+      @media (min-width: 315px) {
+        left: 304px;
+      }
+    }
+  }
+}
