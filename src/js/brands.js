@@ -1,11 +1,17 @@
-const showAllListBtn = document.querySelector('.button-all__brands');
-let showListImg = document.querySelector('.icon-more');
-let brandList = document.querySelector('.brands');
+export const showAllListBtn = document.querySelector('.button-all__brands');
+export let showListImg = document.querySelector('.icon-more');
+export let brandList = document.querySelector('.brands');
 
+   showAllListBtn.addEventListener('click', ShowAllBrands);
+function ShowAllBrands() {
+  brandList.classList.toggle('brands--open');
+  showListImg.classList.toggle('icon-more--reverse');
 
-   showAllListBtn.addEventListener('click', function () {
-     brandList.classList.add('brands--open');
-     this.textContent = this.textContent === 'Показать все' ? 'Скрыть' : 'Показать все';
-   })
-
- export {showAllListBtn, showListImg, brandList};
+  if (brandList.classList.contains('brands--open')){
+    showAllListBtn.textContent = 'Скрыть';
+    showListImg.classList.add('icon-more--reverse');
+  } else {
+    showAllListBtn.textContent = 'Показать все';
+    showListImg.classList.remove('icon-more--reverse');
+  }
+}

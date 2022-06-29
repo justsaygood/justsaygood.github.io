@@ -1,7 +1,6 @@
-let sideMenu = document.querySelector('.side-wrap');
-let openSideMenuButton = document.querySelector('.menu__button--burger');
-let closeSideMenuButton = sideMenu.querySelector('.button--burger');
-let overlay = document.querySelector('.additional-wrapper');
+export let sideMenu = document.querySelector('.side-wrap');
+export let openSideMenuButton = document.querySelector('.menu__button--burger');
+export let closeSideMenuButton = sideMenu.querySelector('.button--burger');
 
  openSideMenuButton.addEventListener('click', function () {
     sideMenu.classList.add('side-wrap--show');
@@ -15,13 +14,18 @@ closeSideMenuButton.addEventListener('click', function () {
 
 })
 
-overlay.addEventListener('click', function (evt) {
+sideMenu.addEventListener('click', function (evt) {
   evt.preventDefault();
   sideMenu.classList.remove('side-wrap--show');
   document.body.classList.remove('body--disabled');
-  document.querySelector('.side-wrap').addEventListener('click', function(e) {
+  document.querySelector('.side-content').addEventListener('click', function(e) {
     e.stopPropagation();
   })
 })
 
-export {sideMenu, openSideMenuButton, closeSideMenuButton, overlay};
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    sideMenu.classList.remove('side-wrap--show');
+    document.body.classList.remove('body--disabled');
+  }
+})
